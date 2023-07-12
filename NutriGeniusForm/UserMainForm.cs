@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NutriGenius.Data.Entities.Classes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,17 +13,23 @@ namespace NutriGeniusForm
 {
     public partial class UserMainForm : Form
     {
-        public UserMainForm()
+        private readonly User _currentUser;
+        public UserMainForm(User currentUser)
         {
+            _currentUser = currentUser;
             InitializeComponent();
+            lblName.Text = lblProfileName.Text = _currentUser.FirstName;
         }
+
+
 
 
 
         private void btnBreakfast_Click(object sender, EventArgs e)
         {
             new FoodForm().ShowDialog();
-            lblMealName
+
+
         }
 
         private void btn_Lunch_Click(object sender, EventArgs e)

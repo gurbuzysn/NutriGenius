@@ -22,34 +22,26 @@ namespace NutriGeniusForm
             InitializeComponent();
         }
 
+        User? logInUser;
+
         private void btnLogın_Click(object sender, EventArgs e)
         {
             using (var db = new NutriGeniusDbContext())
             {
-                User logInUser = new User();
+                logInUser = new User();
+
 
                 if (logInUser.LogIn(db, txtUserName.Text, txtPassword.Text))
                 {
-                    Form form = new UserMainForm();
-                    form.ShowDialog();
+                    logInUser = db.Users.FirstOrDefault(u => u.UserName == txtUserName.Text);
+                        new UserMainForm(logInUser).ShowDialog();
+
                 }
                 else
-                {
                     MessageBox.Show("Şifre veya kullanıcı hatalıdır!");
-                }
             }
-
         }
 
-        private void btnAdmin_Click(object sender, EventArgs e)
-        {
-            Form form = new UserMainForm();
-            form.ShowDialog();
-        }
 
-        private void LoginForm_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

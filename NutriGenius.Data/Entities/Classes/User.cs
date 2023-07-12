@@ -18,7 +18,6 @@ namespace NutriGenius.Data.Entities.Classes
         private string _password = null!;
         private DateTime _birthDate;
 
-
         public int Id { get; set; }
 
         public string UserName { get; set; } = null!;
@@ -114,6 +113,7 @@ namespace NutriGenius.Data.Entities.Classes
             if (db.Users.Any(x => x.Password == Sha256(password)) &&
                  db.Users.Any(x => x.UserName == userName))
             {
+
                 return true;
             }
 

@@ -31,16 +31,19 @@ namespace NutriGeniusForm
         {
             if (cbFoodCategories.SelectedIndex == -1) return;
 
-            int foodCategoryId = ((FoodCategory)(cbFoodCategories.SelectedItem)).Id;
+            UpdateList();
+            CheckControl();
+        }
 
+        private void UpdateList()
+        {
+            int foodCategoryId = ((FoodCategory)(cbFoodCategories.SelectedItem)).Id;
             clbFoods.Items.Clear();
 
             foreach (var food in db.Foods.Where(x => x.FoodCategoryId == foodCategoryId))
             {
                 clbFoods.Items.Add(food);
             }
-
-            CheckControl();
         }
 
         private void CheckControl()
@@ -72,24 +75,22 @@ namespace NutriGeniusForm
                 lstFoods.Items.Remove(food);
             }
 
-
-
-
-
-
-            //lstFoods.Items.Clear();
-            //foreach (var item in clbFoods.CheckedItems)
-            //{
-            //    lstFoods.Items.Add(item);
-            //}
         }
 
-
-
-
-        private void btnKaydet_Click(object sender, EventArgs e)
+        private void btnAddFood_Click(object sender, EventArgs e)
         {
+            new UserAddFoodForm().ShowDialog();
+            UpdateList();
 
+        }
+
+        private void btnSaveFoods_Click(object sender, EventArgs e)
+        {
+            if (lstFoods.Items.Count == 0) return;   // Seçili yoksa Tokat!
+
+            //User currentUser 
+
+            //db.Users.
         }
     }
 }

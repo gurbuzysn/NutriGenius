@@ -34,7 +34,6 @@
             label2 = new Label();
             label3 = new Label();
             btnLogın = new Button();
-            btnAdmin = new Button();
             SuspendLayout();
             // 
             // label1
@@ -55,6 +54,7 @@
             txtUserName.Name = "txtUserName";
             txtUserName.Size = new Size(164, 23);
             txtUserName.TabIndex = 1;
+            txtUserName.Text = "aveli@hotmail.com";
             // 
             // txtPassword
             // 
@@ -62,6 +62,7 @@
             txtPassword.Name = "txtPassword";
             txtPassword.Size = new Size(164, 23);
             txtPassword.TabIndex = 1;
+            txtPassword.Text = "123456aA";
             // 
             // label2
             // 
@@ -98,17 +99,6 @@
             btnLogın.UseVisualStyleBackColor = true;
             btnLogın.Click += btnLogın_Click;
             // 
-            // btnAdmin
-            // 
-            btnAdmin.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            btnAdmin.Location = new Point(832, 683);
-            btnAdmin.Name = "btnAdmin";
-            btnAdmin.Size = new Size(164, 34);
-            btnAdmin.TabIndex = 3;
-            btnAdmin.Text = "Admin Giriş";
-            btnAdmin.UseVisualStyleBackColor = true;
-            btnAdmin.Click += btnAdmin_Click;
-            // 
             // LoginForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -116,7 +106,6 @@
             BackgroundImage = Properties.Resources.LogınForm;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1008, 729);
-            Controls.Add(btnAdmin);
             Controls.Add(btnLogın);
             Controls.Add(label3);
             Controls.Add(label2);
@@ -127,7 +116,6 @@
             Name = "LoginForm";
             StartPosition = FormStartPosition.CenterParent;
             Text = "LogınForm";
-            Load += LoginForm_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -140,6 +128,5 @@
         private Label label2;
         private Label label3;
         private Button btnLogın;
-        private Button btnAdmin;
     }
 }

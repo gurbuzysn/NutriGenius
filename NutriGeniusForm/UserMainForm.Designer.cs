@@ -50,7 +50,7 @@
             pbProfile = new PictureBox();
             pbTrendies = new PictureBox();
             pbDaily = new PictureBox();
-            label2 = new Label();
+            lblProfileName = new Label();
             label4 = new Label();
             label3 = new Label();
             lblName = new Label();
@@ -298,7 +298,7 @@
             panel1.Controls.Add(pbProfile);
             panel1.Controls.Add(pbTrendies);
             panel1.Controls.Add(pbDaily);
-            panel1.Controls.Add(label2);
+            panel1.Controls.Add(lblProfileName);
             panel1.Controls.Add(label4);
             panel1.Controls.Add(label3);
             panel1.Dock = DockStyle.Bottom;
@@ -311,7 +311,7 @@
             // pbProfile
             // 
             pbProfile.Image = (Image)resources.GetObject("pbProfile.Image");
-            pbProfile.Location = new Point(929, 31);
+            pbProfile.Location = new Point(902, 29);
             pbProfile.Name = "pbProfile";
             pbProfile.Size = new Size(67, 46);
             pbProfile.SizeMode = PictureBoxSizeMode.Zoom;
@@ -338,16 +338,16 @@
             pbDaily.TabIndex = 27;
             pbDaily.TabStop = false;
             // 
-            // label2
+            // lblProfileName
             // 
-            label2.AutoSize = true;
-            label2.BackColor = Color.Transparent;
-            label2.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.Location = new Point(944, 78);
-            label2.Name = "label2";
-            label2.Size = new Size(43, 19);
-            label2.TabIndex = 8;
-            label2.Text = "Profil";
+            lblProfileName.AutoSize = true;
+            lblProfileName.BackColor = Color.Transparent;
+            lblProfileName.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            lblProfileName.Location = new Point(913, 78);
+            lblProfileName.Name = "lblProfileName";
+            lblProfileName.Size = new Size(43, 19);
+            lblProfileName.TabIndex = 8;
+            lblProfileName.Text = "Profil";
             // 
             // label4
             // 
@@ -816,7 +816,7 @@
         private PictureBox pbProfile;
         private PictureBox pbTrendies;
         private PictureBox pbDaily;
-        private Label label2;
+        private Label lblProfileName;
         private Label label4;
         private Label label3;
         private Label lblName;
