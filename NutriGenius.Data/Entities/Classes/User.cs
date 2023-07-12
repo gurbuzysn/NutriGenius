@@ -109,12 +109,15 @@ namespace NutriGenius.Data.Entities.Classes
             db.SaveChanges();
         }
 
-        public bool Login(string password, NutriGeniusDbContext db)
+        public bool LogIn(NutriGeniusDbContext db, string userName, string password)
         {
-            if (db.Users.Any(x => x.Password == Sha256(password)))
+            if (db.Users.Any(x => x.Password == Sha256(password)) &&
+                 db.Users.Any(x => x.UserName == userName))
             {
                 return true;
             }
+
+
 
             return false;
         }

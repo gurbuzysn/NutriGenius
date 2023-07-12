@@ -57,7 +57,7 @@ namespace NutriGeniusForm
                         LastName = txtLastName.Text,
                         Gender = rbMale.Checked ? Gender.Male : Gender.Female,
                         BirthDate = dtpBirthDate.Value,
-                        UserName = txtUserName.Text,
+                        UserName = string.Join("", txtUserName.Text, cbMail.SelectedItem.ToString()),
                         Password = txtPassword.Text,
                         Height = Convert.ToInt32(txtHeight.Text),
                         Weight = Convert.ToDouble(txtWeight.Text)
