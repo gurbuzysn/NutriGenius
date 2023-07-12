@@ -16,7 +16,7 @@ namespace NutriGeniusForm
 {
     public partial class LoginForm : Form
     {
-        
+
         public LoginForm()
         {
             InitializeComponent();
@@ -41,6 +41,15 @@ namespace NutriGeniusForm
 
         }
 
-        
+        private void btnAdmin_Click(object sender, EventArgs e)
+        {
+            Form form = new UserMainForm();
+            form.ShowDialog();
+        }
+
+        private void LoginForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

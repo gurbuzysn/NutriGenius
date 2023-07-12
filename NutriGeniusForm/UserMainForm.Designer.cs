@@ -30,117 +30,82 @@
         {
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserMainForm));
-            groupBox3 = new GroupBox();
-            label19 = new Label();
-            button6 = new Button();
             ımageList1 = new ImageList(components);
-            label13 = new Label();
-            label14 = new Label();
-            groupBox2 = new GroupBox();
-            label18 = new Label();
-            button5 = new Button();
-            label11 = new Label();
-            label12 = new Label();
-            groupBox4 = new GroupBox();
-            label20 = new Label();
-            button7 = new Button();
-            label15 = new Label();
-            label16 = new Label();
             groupBox5 = new GroupBox();
-            pictureBox8 = new PictureBox();
-            pictureBox4 = new PictureBox();
+            pbGlass10 = new PictureBox();
+            pbGlass5 = new PictureBox();
+            pbGlass9 = new PictureBox();
+            pbGlass4 = new PictureBox();
+            pbGlass8 = new PictureBox();
+            pbGlass3 = new PictureBox();
+            pbGlass7 = new PictureBox();
+            pbGlass2 = new PictureBox();
+            pbGlass6 = new PictureBox();
+            pbGlass1 = new PictureBox();
             label6 = new Label();
+            label21 = new Label();
             label8 = new Label();
             label7 = new Label();
-            dateTimePicker1 = new DateTimePicker();
             panel1 = new Panel();
+            pbProfile = new PictureBox();
+            pbTrendies = new PictureBox();
+            pbDaily = new PictureBox();
             label2 = new Label();
             label4 = new Label();
             label3 = new Label();
             lblName = new Label();
             label1 = new Label();
             pictureBox1 = new PictureBox();
-            groupBox1 = new GroupBox();
             label17 = new Label();
-            button4 = new Button();
-            label10 = new Label();
-            label9 = new Label();
+            btnBreakfast = new Button();
             label5 = new Label();
-            lblCalorie = new Label();
-            pictureBox2 = new PictureBox();
-            pictureBox5 = new PictureBox();
-            pictureBox6 = new PictureBox();
-            label21 = new Label();
-            pictureBox7 = new PictureBox();
-            pictureBox9 = new PictureBox();
-            pictureBox10 = new PictureBox();
-            pictureBox11 = new PictureBox();
-            pictureBox12 = new PictureBox();
-            pictureBox13 = new PictureBox();
-            pictureBox14 = new PictureBox();
-            pictureBox15 = new PictureBox();
+            lblSumCalorie = new Label();
             pictureBox3 = new PictureBox();
-            groupBox3.SuspendLayout();
-            groupBox2.SuspendLayout();
-            groupBox4.SuspendLayout();
+            pnlBreakfast = new Panel();
+            label24 = new Label();
+            label22 = new Label();
+            lblBreakfastClorie = new Label();
+            pnlLunch = new Panel();
+            btn_Lunch = new Button();
+            label9 = new Label();
+            label10 = new Label();
+            label11 = new Label();
+            lblLunchCalorie = new Label();
+            pnlSnack = new Panel();
+            btn_Snack = new Button();
+            label13 = new Label();
+            label14 = new Label();
+            label15 = new Label();
+            lblSnackClorie = new Label();
+            pnlDinner = new Panel();
+            btn_Dinner = new Button();
+            label18 = new Label();
+            label19 = new Label();
+            label20 = new Label();
+            lblDinnerCalorie = new Label();
+            label12 = new Label();
             groupBox5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pbGlass10).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pbGlass5).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pbGlass9).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pbGlass4).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pbGlass8).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pbGlass3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pbGlass7).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pbGlass2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pbGlass6).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pbGlass1).BeginInit();
             panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pbProfile).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pbTrendies).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pbDaily).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox9).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox10).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox11).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox12).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox13).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox14).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox15).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
+            pnlBreakfast.SuspendLayout();
+            pnlLunch.SuspendLayout();
+            pnlSnack.SuspendLayout();
+            pnlDinner.SuspendLayout();
             SuspendLayout();
-            // 
-            // groupBox3
-            // 
-            groupBox3.BackColor = Color.LightGray;
-            groupBox3.Controls.Add(label19);
-            groupBox3.Controls.Add(button6);
-            groupBox3.Controls.Add(label13);
-            groupBox3.Controls.Add(label14);
-            groupBox3.Font = new Font("Segoe UI Semibold", 9.8F, FontStyle.Bold, GraphicsUnit.Point);
-            groupBox3.Location = new Point(510, 377);
-            groupBox3.Margin = new Padding(3, 2, 3, 2);
-            groupBox3.Name = "groupBox3";
-            groupBox3.Padding = new Padding(3, 2, 3, 2);
-            groupBox3.Size = new Size(169, 69);
-            groupBox3.TabIndex = 22;
-            groupBox3.TabStop = false;
-            groupBox3.Text = "Akşam";
-            // 
-            // label19
-            // 
-            label19.AutoSize = true;
-            label19.Location = new Point(46, 43);
-            label19.Name = "label19";
-            label19.Size = new Size(34, 19);
-            label19.TabIndex = 9;
-            label19.Text = "kcal";
-            // 
-            // button6
-            // 
-            button6.BackColor = Color.Transparent;
-            button6.BackgroundImageLayout = ImageLayout.Stretch;
-            button6.ImageIndex = 1;
-            button6.ImageList = ımageList1;
-            button6.Location = new Point(123, 26);
-            button6.Margin = new Padding(3, 2, 3, 2);
-            button6.Name = "button6";
-            button6.Size = new Size(40, 34);
-            button6.TabIndex = 8;
-            button6.UseVisualStyleBackColor = false;
             // 
             // ımageList1
             // 
@@ -150,195 +115,142 @@
             ımageList1.Images.SetKeyName(0, "Blue Green Grey Chiropractic Logo  (2).png");
             ımageList1.Images.SetKeyName(1, "ekle.png");
             // 
-            // label13
-            // 
-            label13.AutoSize = true;
-            label13.Location = new Point(10, 43);
-            label13.Name = "label13";
-            label13.Size = new Size(17, 19);
-            label13.TabIndex = 5;
-            label13.Text = "0";
-            // 
-            // label14
-            // 
-            label14.AutoSize = true;
-            label14.BackColor = Color.Transparent;
-            label14.Font = new Font("Segoe UI Semibold", 8.8F, FontStyle.Bold, GraphicsUnit.Point);
-            label14.ForeColor = Color.DarkSlateGray;
-            label14.Location = new Point(5, 28);
-            label14.Name = "label14";
-            label14.Size = new Size(41, 15);
-            label14.TabIndex = 4;
-            label14.Text = "Alınan";
-            // 
-            // groupBox2
-            // 
-            groupBox2.BackColor = Color.LightGray;
-            groupBox2.Controls.Add(label18);
-            groupBox2.Controls.Add(button5);
-            groupBox2.Controls.Add(label11);
-            groupBox2.Controls.Add(label12);
-            groupBox2.Font = new Font("Segoe UI Semibold", 9.8F, FontStyle.Bold, GraphicsUnit.Point);
-            groupBox2.Location = new Point(336, 377);
-            groupBox2.Margin = new Padding(3, 2, 3, 2);
-            groupBox2.Name = "groupBox2";
-            groupBox2.Padding = new Padding(3, 2, 3, 2);
-            groupBox2.Size = new Size(169, 69);
-            groupBox2.TabIndex = 23;
-            groupBox2.TabStop = false;
-            groupBox2.Text = "Öğle";
-            // 
-            // label18
-            // 
-            label18.AutoSize = true;
-            label18.Location = new Point(44, 43);
-            label18.Name = "label18";
-            label18.Size = new Size(34, 19);
-            label18.TabIndex = 8;
-            label18.Text = "kcal";
-            // 
-            // button5
-            // 
-            button5.BackColor = Color.Transparent;
-            button5.BackgroundImageLayout = ImageLayout.Stretch;
-            button5.ImageIndex = 1;
-            button5.ImageList = ımageList1;
-            button5.Location = new Point(123, 26);
-            button5.Margin = new Padding(3, 2, 3, 2);
-            button5.Name = "button5";
-            button5.Size = new Size(40, 34);
-            button5.TabIndex = 7;
-            button5.UseVisualStyleBackColor = false;
-            // 
-            // label11
-            // 
-            label11.AutoSize = true;
-            label11.Location = new Point(10, 43);
-            label11.Name = "label11";
-            label11.Size = new Size(17, 19);
-            label11.TabIndex = 5;
-            label11.Text = "0";
-            // 
-            // label12
-            // 
-            label12.AutoSize = true;
-            label12.BackColor = Color.Transparent;
-            label12.Font = new Font("Segoe UI Semibold", 8.8F, FontStyle.Bold, GraphicsUnit.Point);
-            label12.ForeColor = Color.DarkSlateGray;
-            label12.Location = new Point(5, 28);
-            label12.Name = "label12";
-            label12.Size = new Size(41, 15);
-            label12.TabIndex = 4;
-            label12.Text = "Alınan";
-            // 
-            // groupBox4
-            // 
-            groupBox4.BackColor = Color.LightGray;
-            groupBox4.Controls.Add(label20);
-            groupBox4.Controls.Add(button7);
-            groupBox4.Controls.Add(label15);
-            groupBox4.Controls.Add(label16);
-            groupBox4.Font = new Font("Segoe UI Semibold", 9.8F, FontStyle.Bold, GraphicsUnit.Point);
-            groupBox4.Location = new Point(685, 377);
-            groupBox4.Margin = new Padding(3, 2, 3, 2);
-            groupBox4.Name = "groupBox4";
-            groupBox4.Padding = new Padding(3, 2, 3, 2);
-            groupBox4.Size = new Size(169, 69);
-            groupBox4.TabIndex = 24;
-            groupBox4.TabStop = false;
-            groupBox4.Text = "Ara Öğün";
-            // 
-            // label20
-            // 
-            label20.AutoSize = true;
-            label20.Location = new Point(45, 43);
-            label20.Name = "label20";
-            label20.Size = new Size(34, 19);
-            label20.TabIndex = 10;
-            label20.Text = "kcal";
-            // 
-            // button7
-            // 
-            button7.BackColor = Color.Transparent;
-            button7.BackgroundImageLayout = ImageLayout.Stretch;
-            button7.ImageIndex = 1;
-            button7.ImageList = ımageList1;
-            button7.Location = new Point(123, 26);
-            button7.Margin = new Padding(3, 2, 3, 2);
-            button7.Name = "button7";
-            button7.Size = new Size(40, 34);
-            button7.TabIndex = 9;
-            button7.UseVisualStyleBackColor = false;
-            // 
-            // label15
-            // 
-            label15.AutoSize = true;
-            label15.Location = new Point(10, 43);
-            label15.Name = "label15";
-            label15.Size = new Size(17, 19);
-            label15.TabIndex = 5;
-            label15.Text = "0";
-            // 
-            // label16
-            // 
-            label16.AutoSize = true;
-            label16.BackColor = Color.Transparent;
-            label16.Font = new Font("Segoe UI Semibold", 8.8F, FontStyle.Bold, GraphicsUnit.Point);
-            label16.ForeColor = Color.DarkSlateGray;
-            label16.Location = new Point(5, 28);
-            label16.Name = "label16";
-            label16.Size = new Size(41, 15);
-            label16.TabIndex = 4;
-            label16.Text = "Alınan";
-            // 
             // groupBox5
             // 
             groupBox5.BackColor = Color.LightGray;
-            groupBox5.Controls.Add(pictureBox12);
-            groupBox5.Controls.Add(pictureBox6);
-            groupBox5.Controls.Add(pictureBox11);
-            groupBox5.Controls.Add(pictureBox5);
-            groupBox5.Controls.Add(pictureBox10);
-            groupBox5.Controls.Add(pictureBox2);
-            groupBox5.Controls.Add(pictureBox9);
-            groupBox5.Controls.Add(pictureBox8);
-            groupBox5.Controls.Add(pictureBox7);
-            groupBox5.Controls.Add(pictureBox4);
+            groupBox5.Controls.Add(pbGlass10);
+            groupBox5.Controls.Add(pbGlass5);
+            groupBox5.Controls.Add(pbGlass9);
+            groupBox5.Controls.Add(pbGlass4);
+            groupBox5.Controls.Add(pbGlass8);
+            groupBox5.Controls.Add(pbGlass3);
+            groupBox5.Controls.Add(pbGlass7);
+            groupBox5.Controls.Add(pbGlass2);
+            groupBox5.Controls.Add(pbGlass6);
+            groupBox5.Controls.Add(pbGlass1);
             groupBox5.Controls.Add(label6);
             groupBox5.Controls.Add(label21);
             groupBox5.Controls.Add(label8);
             groupBox5.Controls.Add(label7);
             groupBox5.Font = new Font("Segoe UI Semibold", 9.2F, FontStyle.Bold, GraphicsUnit.Point);
-            groupBox5.Location = new Point(167, 503);
+            groupBox5.Location = new Point(176, 503);
             groupBox5.Margin = new Padding(3, 2, 3, 2);
             groupBox5.Name = "groupBox5";
             groupBox5.Padding = new Padding(3, 2, 3, 2);
-            groupBox5.Size = new Size(682, 86);
+            groupBox5.Size = new Size(673, 86);
             groupBox5.TabIndex = 25;
             groupBox5.TabStop = false;
             groupBox5.Text = "Su";
             // 
-            // pictureBox8
+            // pbGlass10
             // 
-            pictureBox8.Image = (Image)resources.GetObject("pictureBox8.Image");
-            pictureBox8.Location = new Point(115, 21);
-            pictureBox8.Margin = new Padding(3, 2, 3, 2);
-            pictureBox8.Name = "pictureBox8";
-            pictureBox8.Size = new Size(51, 39);
-            pictureBox8.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox8.TabIndex = 4;
-            pictureBox8.TabStop = false;
+            pbGlass10.Image = (Image)resources.GetObject("pbGlass10.Image");
+            pbGlass10.Location = new Point(570, 21);
+            pbGlass10.Margin = new Padding(3, 2, 3, 2);
+            pbGlass10.Name = "pbGlass10";
+            pbGlass10.Size = new Size(51, 39);
+            pbGlass10.SizeMode = PictureBoxSizeMode.Zoom;
+            pbGlass10.TabIndex = 4;
+            pbGlass10.TabStop = false;
             // 
-            // pictureBox4
+            // pbGlass5
             // 
-            pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
-            pictureBox4.Location = new Point(59, 21);
-            pictureBox4.Margin = new Padding(3, 2, 3, 2);
-            pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(51, 39);
-            pictureBox4.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox4.TabIndex = 3;
-            pictureBox4.TabStop = false;
+            pbGlass5.Image = (Image)resources.GetObject("pbGlass5.Image");
+            pbGlass5.Location = new Point(286, 21);
+            pbGlass5.Margin = new Padding(3, 2, 3, 2);
+            pbGlass5.Name = "pbGlass5";
+            pbGlass5.Size = new Size(51, 39);
+            pbGlass5.SizeMode = PictureBoxSizeMode.Zoom;
+            pbGlass5.TabIndex = 4;
+            pbGlass5.TabStop = false;
+            // 
+            // pbGlass9
+            // 
+            pbGlass9.Image = (Image)resources.GetObject("pbGlass9.Image");
+            pbGlass9.Location = new Point(513, 21);
+            pbGlass9.Margin = new Padding(3, 2, 3, 2);
+            pbGlass9.Name = "pbGlass9";
+            pbGlass9.Size = new Size(51, 39);
+            pbGlass9.SizeMode = PictureBoxSizeMode.Zoom;
+            pbGlass9.TabIndex = 4;
+            pbGlass9.TabStop = false;
+            // 
+            // pbGlass4
+            // 
+            pbGlass4.Image = (Image)resources.GetObject("pbGlass4.Image");
+            pbGlass4.Location = new Point(229, 21);
+            pbGlass4.Margin = new Padding(3, 2, 3, 2);
+            pbGlass4.Name = "pbGlass4";
+            pbGlass4.Size = new Size(51, 39);
+            pbGlass4.SizeMode = PictureBoxSizeMode.Zoom;
+            pbGlass4.TabIndex = 4;
+            pbGlass4.TabStop = false;
+            // 
+            // pbGlass8
+            // 
+            pbGlass8.Image = (Image)resources.GetObject("pbGlass8.Image");
+            pbGlass8.Location = new Point(456, 21);
+            pbGlass8.Margin = new Padding(3, 2, 3, 2);
+            pbGlass8.Name = "pbGlass8";
+            pbGlass8.Size = new Size(51, 39);
+            pbGlass8.SizeMode = PictureBoxSizeMode.Zoom;
+            pbGlass8.TabIndex = 4;
+            pbGlass8.TabStop = false;
+            // 
+            // pbGlass3
+            // 
+            pbGlass3.Image = (Image)resources.GetObject("pbGlass3.Image");
+            pbGlass3.Location = new Point(172, 21);
+            pbGlass3.Margin = new Padding(3, 2, 3, 2);
+            pbGlass3.Name = "pbGlass3";
+            pbGlass3.Size = new Size(51, 39);
+            pbGlass3.SizeMode = PictureBoxSizeMode.Zoom;
+            pbGlass3.TabIndex = 4;
+            pbGlass3.TabStop = false;
+            // 
+            // pbGlass7
+            // 
+            pbGlass7.Image = (Image)resources.GetObject("pbGlass7.Image");
+            pbGlass7.Location = new Point(399, 21);
+            pbGlass7.Margin = new Padding(3, 2, 3, 2);
+            pbGlass7.Name = "pbGlass7";
+            pbGlass7.Size = new Size(51, 39);
+            pbGlass7.SizeMode = PictureBoxSizeMode.Zoom;
+            pbGlass7.TabIndex = 4;
+            pbGlass7.TabStop = false;
+            // 
+            // pbGlass2
+            // 
+            pbGlass2.Image = (Image)resources.GetObject("pbGlass2.Image");
+            pbGlass2.Location = new Point(115, 21);
+            pbGlass2.Margin = new Padding(3, 2, 3, 2);
+            pbGlass2.Name = "pbGlass2";
+            pbGlass2.Size = new Size(51, 39);
+            pbGlass2.SizeMode = PictureBoxSizeMode.Zoom;
+            pbGlass2.TabIndex = 4;
+            pbGlass2.TabStop = false;
+            // 
+            // pbGlass6
+            // 
+            pbGlass6.Image = (Image)resources.GetObject("pbGlass6.Image");
+            pbGlass6.Location = new Point(343, 21);
+            pbGlass6.Margin = new Padding(3, 2, 3, 2);
+            pbGlass6.Name = "pbGlass6";
+            pbGlass6.Size = new Size(51, 39);
+            pbGlass6.SizeMode = PictureBoxSizeMode.Zoom;
+            pbGlass6.TabIndex = 3;
+            pbGlass6.TabStop = false;
+            // 
+            // pbGlass1
+            // 
+            pbGlass1.Image = (Image)resources.GetObject("pbGlass1.Image");
+            pbGlass1.Location = new Point(59, 21);
+            pbGlass1.Margin = new Padding(3, 2, 3, 2);
+            pbGlass1.Name = "pbGlass1";
+            pbGlass1.Size = new Size(51, 39);
+            pbGlass1.SizeMode = PictureBoxSizeMode.Zoom;
+            pbGlass1.TabIndex = 3;
+            pbGlass1.TabStop = false;
             // 
             // label6
             // 
@@ -350,11 +262,21 @@
             label6.TabIndex = 0;
             label6.Text = "Önerilen 2 litre";
             // 
+            // label21
+            // 
+            label21.AutoSize = true;
+            label21.Font = new Font("Segoe UI Semibold", 13.2F, FontStyle.Bold, GraphicsUnit.Point);
+            label21.Location = new Point(299, 57);
+            label21.Name = "label21";
+            label21.Size = new Size(22, 25);
+            label21.TabIndex = 1;
+            label21.Text = "0";
+            // 
             // label8
             // 
             label8.AutoSize = true;
             label8.Font = new Font("Segoe UI Semibold", 11.2F, FontStyle.Bold, GraphicsUnit.Point);
-            label8.Location = new Point(39, 60);
+            label8.Location = new Point(26, 61);
             label8.Name = "label8";
             label8.Size = new Size(36, 20);
             label8.TabIndex = 2;
@@ -364,28 +286,18 @@
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Segoe UI Semibold", 13.2F, FontStyle.Bold, GraphicsUnit.Point);
-            label7.Location = new Point(15, 57);
+            label7.Location = new Point(2, 58);
             label7.Name = "label7";
             label7.Size = new Size(22, 25);
             label7.TabIndex = 1;
             label7.Text = "0";
             // 
-            // dateTimePicker1
-            // 
-            dateTimePicker1.CalendarMonthBackground = Color.Transparent;
-            dateTimePicker1.Format = DateTimePickerFormat.Short;
-            dateTimePicker1.Location = new Point(620, 46);
-            dateTimePicker1.Margin = new Padding(3, 2, 3, 2);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(105, 23);
-            dateTimePicker1.TabIndex = 26;
-            // 
             // panel1
             // 
             panel1.BackColor = Color.Gray;
-            panel1.Controls.Add(pictureBox15);
-            panel1.Controls.Add(pictureBox14);
-            panel1.Controls.Add(pictureBox13);
+            panel1.Controls.Add(pbProfile);
+            panel1.Controls.Add(pbTrendies);
+            panel1.Controls.Add(pbDaily);
             panel1.Controls.Add(label2);
             panel1.Controls.Add(label4);
             panel1.Controls.Add(label3);
@@ -395,6 +307,36 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(1008, 125);
             panel1.TabIndex = 17;
+            // 
+            // pbProfile
+            // 
+            pbProfile.Image = (Image)resources.GetObject("pbProfile.Image");
+            pbProfile.Location = new Point(929, 31);
+            pbProfile.Name = "pbProfile";
+            pbProfile.Size = new Size(67, 46);
+            pbProfile.SizeMode = PictureBoxSizeMode.Zoom;
+            pbProfile.TabIndex = 27;
+            pbProfile.TabStop = false;
+            // 
+            // pbTrendies
+            // 
+            pbTrendies.Image = (Image)resources.GetObject("pbTrendies.Image");
+            pbTrendies.Location = new Point(136, 31);
+            pbTrendies.Name = "pbTrendies";
+            pbTrendies.Size = new Size(67, 46);
+            pbTrendies.SizeMode = PictureBoxSizeMode.Zoom;
+            pbTrendies.TabIndex = 27;
+            pbTrendies.TabStop = false;
+            // 
+            // pbDaily
+            // 
+            pbDaily.Image = (Image)resources.GetObject("pbDaily.Image");
+            pbDaily.Location = new Point(26, 31);
+            pbDaily.Name = "pbDaily";
+            pbDaily.Size = new Size(67, 46);
+            pbDaily.SizeMode = PictureBoxSizeMode.Zoom;
+            pbDaily.TabIndex = 27;
+            pbDaily.TabStop = false;
             // 
             // label2
             // 
@@ -417,7 +359,6 @@
             label4.Size = new Size(60, 19);
             label4.TabIndex = 10;
             label4.Text = "Trendler";
-            label4.Click += label4_Click;
             // 
             // label3
             // 
@@ -437,9 +378,9 @@
             lblName.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
             lblName.Location = new Point(402, 39);
             lblName.Name = "lblName";
-            lblName.Size = new Size(47, 19);
+            lblName.Size = new Size(35, 19);
             lblName.TabIndex = 15;
-            lblName.Text = "label2";
+            lblName.Text = "isim";
             // 
             // label1
             // 
@@ -464,65 +405,29 @@
             pictureBox1.TabIndex = 16;
             pictureBox1.TabStop = false;
             // 
-            // groupBox1
-            // 
-            groupBox1.BackColor = Color.LightGray;
-            groupBox1.Controls.Add(label17);
-            groupBox1.Controls.Add(button4);
-            groupBox1.Controls.Add(label10);
-            groupBox1.Controls.Add(label9);
-            groupBox1.Font = new Font("Segoe UI Semibold", 9.8F, FontStyle.Bold, GraphicsUnit.Point);
-            groupBox1.Location = new Point(156, 377);
-            groupBox1.Margin = new Padding(3, 2, 3, 2);
-            groupBox1.Name = "groupBox1";
-            groupBox1.Padding = new Padding(3, 2, 3, 2);
-            groupBox1.Size = new Size(169, 69);
-            groupBox1.TabIndex = 21;
-            groupBox1.TabStop = false;
-            groupBox1.Text = "Sabah";
-            // 
             // label17
             // 
             label17.AutoSize = true;
-            label17.Location = new Point(42, 43);
+            label17.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label17.Location = new Point(53, 47);
             label17.Name = "label17";
-            label17.Size = new Size(34, 19);
+            label17.Size = new Size(29, 15);
             label17.TabIndex = 7;
             label17.Text = "kcal";
             // 
-            // button4
+            // btnBreakfast
             // 
-            button4.BackColor = Color.Transparent;
-            button4.BackgroundImageLayout = ImageLayout.Stretch;
-            button4.ImageIndex = 1;
-            button4.ImageList = ımageList1;
-            button4.Location = new Point(123, 26);
-            button4.Margin = new Padding(3, 2, 3, 2);
-            button4.Name = "button4";
-            button4.Size = new Size(40, 34);
-            button4.TabIndex = 6;
-            button4.UseVisualStyleBackColor = false;
-            // 
-            // label10
-            // 
-            label10.AutoSize = true;
-            label10.Location = new Point(10, 43);
-            label10.Name = "label10";
-            label10.Size = new Size(17, 19);
-            label10.TabIndex = 5;
-            label10.Text = "0";
-            // 
-            // label9
-            // 
-            label9.AutoSize = true;
-            label9.BackColor = Color.Transparent;
-            label9.Font = new Font("Segoe UI Semibold", 8.8F, FontStyle.Bold, GraphicsUnit.Point);
-            label9.ForeColor = Color.DarkSlateGray;
-            label9.Location = new Point(5, 28);
-            label9.Name = "label9";
-            label9.Size = new Size(41, 15);
-            label9.TabIndex = 4;
-            label9.Text = "Alınan";
+            btnBreakfast.BackColor = Color.Transparent;
+            btnBreakfast.BackgroundImageLayout = ImageLayout.Stretch;
+            btnBreakfast.ImageIndex = 1;
+            btnBreakfast.ImageList = ımageList1;
+            btnBreakfast.Location = new Point(120, 22);
+            btnBreakfast.Margin = new Padding(3, 2, 3, 2);
+            btnBreakfast.Name = "btnBreakfast";
+            btnBreakfast.Size = new Size(40, 34);
+            btnBreakfast.TabIndex = 6;
+            btnBreakfast.UseVisualStyleBackColor = false;
+            btnBreakfast.Click += btnBreakfast_Click;
             // 
             // label5
             // 
@@ -535,145 +440,17 @@
             label5.Text = "Alınan Kalori";
             label5.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // lblCalorie
+            // lblSumCalorie
             // 
-            lblCalorie.BackColor = Color.Transparent;
-            lblCalorie.Font = new Font("Comic Sans MS", 14.8F, FontStyle.Bold, GraphicsUnit.Point);
-            lblCalorie.Location = new Point(478, 122);
-            lblCalorie.Name = "lblCalorie";
-            lblCalorie.RightToLeft = RightToLeft.Yes;
-            lblCalorie.Size = new Size(79, 47);
-            lblCalorie.TabIndex = 18;
-            lblCalorie.Text = "0";
-            lblCalorie.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // pictureBox2
-            // 
-            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(172, 21);
-            pictureBox2.Margin = new Padding(3, 2, 3, 2);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(51, 39);
-            pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox2.TabIndex = 4;
-            pictureBox2.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
-            pictureBox5.Location = new Point(229, 21);
-            pictureBox5.Margin = new Padding(3, 2, 3, 2);
-            pictureBox5.Name = "pictureBox5";
-            pictureBox5.Size = new Size(51, 39);
-            pictureBox5.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox5.TabIndex = 4;
-            pictureBox5.TabStop = false;
-            // 
-            // pictureBox6
-            // 
-            pictureBox6.Image = (Image)resources.GetObject("pictureBox6.Image");
-            pictureBox6.Location = new Point(286, 21);
-            pictureBox6.Margin = new Padding(3, 2, 3, 2);
-            pictureBox6.Name = "pictureBox6";
-            pictureBox6.Size = new Size(51, 39);
-            pictureBox6.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox6.TabIndex = 4;
-            pictureBox6.TabStop = false;
-            // 
-            // label21
-            // 
-            label21.AutoSize = true;
-            label21.Font = new Font("Segoe UI Semibold", 13.2F, FontStyle.Bold, GraphicsUnit.Point);
-            label21.Location = new Point(299, 57);
-            label21.Name = "label21";
-            label21.Size = new Size(22, 25);
-            label21.TabIndex = 1;
-            label21.Text = "0";
-            // 
-            // pictureBox7
-            // 
-            pictureBox7.Image = (Image)resources.GetObject("pictureBox7.Image");
-            pictureBox7.Location = new Point(343, 21);
-            pictureBox7.Margin = new Padding(3, 2, 3, 2);
-            pictureBox7.Name = "pictureBox7";
-            pictureBox7.Size = new Size(51, 39);
-            pictureBox7.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox7.TabIndex = 3;
-            pictureBox7.TabStop = false;
-            // 
-            // pictureBox9
-            // 
-            pictureBox9.Image = (Image)resources.GetObject("pictureBox9.Image");
-            pictureBox9.Location = new Point(399, 21);
-            pictureBox9.Margin = new Padding(3, 2, 3, 2);
-            pictureBox9.Name = "pictureBox9";
-            pictureBox9.Size = new Size(51, 39);
-            pictureBox9.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox9.TabIndex = 4;
-            pictureBox9.TabStop = false;
-            // 
-            // pictureBox10
-            // 
-            pictureBox10.Image = (Image)resources.GetObject("pictureBox10.Image");
-            pictureBox10.Location = new Point(456, 21);
-            pictureBox10.Margin = new Padding(3, 2, 3, 2);
-            pictureBox10.Name = "pictureBox10";
-            pictureBox10.Size = new Size(51, 39);
-            pictureBox10.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox10.TabIndex = 4;
-            pictureBox10.TabStop = false;
-            // 
-            // pictureBox11
-            // 
-            pictureBox11.Image = (Image)resources.GetObject("pictureBox11.Image");
-            pictureBox11.Location = new Point(513, 21);
-            pictureBox11.Margin = new Padding(3, 2, 3, 2);
-            pictureBox11.Name = "pictureBox11";
-            pictureBox11.Size = new Size(51, 39);
-            pictureBox11.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox11.TabIndex = 4;
-            pictureBox11.TabStop = false;
-            // 
-            // pictureBox12
-            // 
-            pictureBox12.Image = (Image)resources.GetObject("pictureBox12.Image");
-            pictureBox12.Location = new Point(570, 21);
-            pictureBox12.Margin = new Padding(3, 2, 3, 2);
-            pictureBox12.Name = "pictureBox12";
-            pictureBox12.Size = new Size(51, 39);
-            pictureBox12.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox12.TabIndex = 4;
-            pictureBox12.TabStop = false;
-            // 
-            // pictureBox13
-            // 
-            pictureBox13.Image = (Image)resources.GetObject("pictureBox13.Image");
-            pictureBox13.Location = new Point(26, 31);
-            pictureBox13.Name = "pictureBox13";
-            pictureBox13.Size = new Size(67, 46);
-            pictureBox13.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox13.TabIndex = 27;
-            pictureBox13.TabStop = false;
-            // 
-            // pictureBox14
-            // 
-            pictureBox14.Image = (Image)resources.GetObject("pictureBox14.Image");
-            pictureBox14.Location = new Point(136, 31);
-            pictureBox14.Name = "pictureBox14";
-            pictureBox14.Size = new Size(67, 46);
-            pictureBox14.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox14.TabIndex = 27;
-            pictureBox14.TabStop = false;
-            // 
-            // pictureBox15
-            // 
-            pictureBox15.Image = (Image)resources.GetObject("pictureBox15.Image");
-            pictureBox15.Location = new Point(929, 31);
-            pictureBox15.Name = "pictureBox15";
-            pictureBox15.Size = new Size(67, 46);
-            pictureBox15.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox15.TabIndex = 27;
-            pictureBox15.TabStop = false;
+            lblSumCalorie.BackColor = Color.Transparent;
+            lblSumCalorie.Font = new Font("Comic Sans MS", 14.8F, FontStyle.Bold, GraphicsUnit.Point);
+            lblSumCalorie.Location = new Point(478, 122);
+            lblSumCalorie.Name = "lblSumCalorie";
+            lblSumCalorie.RightToLeft = RightToLeft.Yes;
+            lblSumCalorie.Size = new Size(79, 47);
+            lblSumCalorie.TabIndex = 18;
+            lblSumCalorie.Text = "0";
+            lblSumCalorie.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // pictureBox3
             // 
@@ -686,55 +463,326 @@
             pictureBox3.TabIndex = 27;
             pictureBox3.TabStop = false;
             // 
+            // pnlBreakfast
+            // 
+            pnlBreakfast.BackColor = Color.LightGray;
+            pnlBreakfast.Controls.Add(label17);
+            pnlBreakfast.Controls.Add(label24);
+            pnlBreakfast.Controls.Add(btnBreakfast);
+            pnlBreakfast.Controls.Add(label22);
+            pnlBreakfast.Controls.Add(lblBreakfastClorie);
+            pnlBreakfast.Location = new Point(140, 369);
+            pnlBreakfast.Name = "pnlBreakfast";
+            pnlBreakfast.Size = new Size(169, 69);
+            pnlBreakfast.TabIndex = 28;
+            // 
+            // label24
+            // 
+            label24.AutoSize = true;
+            label24.BackColor = Color.Transparent;
+            label24.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            label24.ForeColor = Color.Black;
+            label24.Location = new Point(11, 6);
+            label24.Name = "label24";
+            label24.Size = new Size(47, 19);
+            label24.TabIndex = 4;
+            label24.Text = "Sabah";
+            // 
+            // label22
+            // 
+            label22.AutoSize = true;
+            label22.BackColor = Color.Transparent;
+            label22.Font = new Font("Segoe UI Semibold", 8.8F, FontStyle.Bold, GraphicsUnit.Point);
+            label22.ForeColor = Color.DarkSlateGray;
+            label22.Location = new Point(13, 26);
+            label22.Name = "label22";
+            label22.Size = new Size(41, 15);
+            label22.TabIndex = 4;
+            label22.Text = "Alınan";
+            // 
+            // lblBreakfastClorie
+            // 
+            lblBreakfastClorie.AutoSize = true;
+            lblBreakfastClorie.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            lblBreakfastClorie.Location = new Point(25, 44);
+            lblBreakfastClorie.Name = "lblBreakfastClorie";
+            lblBreakfastClorie.Size = new Size(17, 19);
+            lblBreakfastClorie.TabIndex = 5;
+            lblBreakfastClorie.Text = "0";
+            // 
+            // pnlLunch
+            // 
+            pnlLunch.BackColor = Color.LightGray;
+            pnlLunch.Controls.Add(btn_Lunch);
+            pnlLunch.Controls.Add(label9);
+            pnlLunch.Controls.Add(label10);
+            pnlLunch.Controls.Add(label11);
+            pnlLunch.Controls.Add(lblLunchCalorie);
+            pnlLunch.Location = new Point(330, 369);
+            pnlLunch.Name = "pnlLunch";
+            pnlLunch.Size = new Size(169, 69);
+            pnlLunch.TabIndex = 29;
+            // 
+            // btn_Lunch
+            // 
+            btn_Lunch.BackColor = Color.Transparent;
+            btn_Lunch.BackgroundImageLayout = ImageLayout.Stretch;
+            btn_Lunch.ImageIndex = 1;
+            btn_Lunch.ImageList = ımageList1;
+            btn_Lunch.Location = new Point(126, 22);
+            btn_Lunch.Margin = new Padding(3, 2, 3, 2);
+            btn_Lunch.Name = "btn_Lunch";
+            btn_Lunch.Size = new Size(40, 34);
+            btn_Lunch.TabIndex = 33;
+            btn_Lunch.UseVisualStyleBackColor = false;
+            btn_Lunch.Click += btn_Lunch_Click;
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label9.Location = new Point(53, 47);
+            label9.Name = "label9";
+            label9.Size = new Size(29, 15);
+            label9.TabIndex = 7;
+            label9.Text = "kcal";
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.BackColor = Color.Transparent;
+            label10.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            label10.ForeColor = Color.Black;
+            label10.Location = new Point(11, 6);
+            label10.Name = "label10";
+            label10.Size = new Size(39, 19);
+            label10.TabIndex = 4;
+            label10.Text = "Öğle";
+            // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.BackColor = Color.Transparent;
+            label11.Font = new Font("Segoe UI Semibold", 8.8F, FontStyle.Bold, GraphicsUnit.Point);
+            label11.ForeColor = Color.DarkSlateGray;
+            label11.Location = new Point(13, 26);
+            label11.Name = "label11";
+            label11.Size = new Size(41, 15);
+            label11.TabIndex = 4;
+            label11.Text = "Alınan";
+            // 
+            // lblLunchCalorie
+            // 
+            lblLunchCalorie.AutoSize = true;
+            lblLunchCalorie.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            lblLunchCalorie.Location = new Point(25, 44);
+            lblLunchCalorie.Name = "lblLunchCalorie";
+            lblLunchCalorie.Size = new Size(17, 19);
+            lblLunchCalorie.TabIndex = 5;
+            lblLunchCalorie.Text = "0";
+            // 
+            // pnlSnack
+            // 
+            pnlSnack.BackColor = Color.LightGray;
+            pnlSnack.Controls.Add(btn_Snack);
+            pnlSnack.Controls.Add(label13);
+            pnlSnack.Controls.Add(label14);
+            pnlSnack.Controls.Add(label15);
+            pnlSnack.Controls.Add(lblSnackClorie);
+            pnlSnack.Location = new Point(707, 369);
+            pnlSnack.Name = "pnlSnack";
+            pnlSnack.Size = new Size(169, 69);
+            pnlSnack.TabIndex = 30;
+            // 
+            // btn_Snack
+            // 
+            btn_Snack.BackColor = Color.Transparent;
+            btn_Snack.BackgroundImageLayout = ImageLayout.Stretch;
+            btn_Snack.ImageIndex = 1;
+            btn_Snack.ImageList = ımageList1;
+            btn_Snack.Location = new Point(116, 22);
+            btn_Snack.Margin = new Padding(3, 2, 3, 2);
+            btn_Snack.Name = "btn_Snack";
+            btn_Snack.Size = new Size(40, 34);
+            btn_Snack.TabIndex = 31;
+            btn_Snack.UseVisualStyleBackColor = false;
+            btn_Snack.Click += btn_Snack_Click;
+            // 
+            // label13
+            // 
+            label13.AutoSize = true;
+            label13.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label13.Location = new Point(53, 47);
+            label13.Name = "label13";
+            label13.Size = new Size(29, 15);
+            label13.TabIndex = 7;
+            label13.Text = "kcal";
+            // 
+            // label14
+            // 
+            label14.AutoSize = true;
+            label14.BackColor = Color.Transparent;
+            label14.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            label14.ForeColor = Color.Black;
+            label14.Location = new Point(11, 6);
+            label14.Name = "label14";
+            label14.Size = new Size(69, 19);
+            label14.TabIndex = 4;
+            label14.Text = "Ara Öğün";
+            // 
+            // label15
+            // 
+            label15.AutoSize = true;
+            label15.BackColor = Color.Transparent;
+            label15.Font = new Font("Segoe UI Semibold", 8.8F, FontStyle.Bold, GraphicsUnit.Point);
+            label15.ForeColor = Color.DarkSlateGray;
+            label15.Location = new Point(13, 26);
+            label15.Name = "label15";
+            label15.Size = new Size(41, 15);
+            label15.TabIndex = 4;
+            label15.Text = "Alınan";
+            // 
+            // lblSnackClorie
+            // 
+            lblSnackClorie.AutoSize = true;
+            lblSnackClorie.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            lblSnackClorie.Location = new Point(25, 44);
+            lblSnackClorie.Name = "lblSnackClorie";
+            lblSnackClorie.Size = new Size(17, 19);
+            lblSnackClorie.TabIndex = 5;
+            lblSnackClorie.Text = "0";
+            // 
+            // pnlDinner
+            // 
+            pnlDinner.BackColor = Color.LightGray;
+            pnlDinner.Controls.Add(btn_Dinner);
+            pnlDinner.Controls.Add(label18);
+            pnlDinner.Controls.Add(label19);
+            pnlDinner.Controls.Add(label20);
+            pnlDinner.Controls.Add(lblDinnerCalorie);
+            pnlDinner.Location = new Point(521, 369);
+            pnlDinner.Name = "pnlDinner";
+            pnlDinner.Size = new Size(169, 69);
+            pnlDinner.TabIndex = 29;
+            // 
+            // btn_Dinner
+            // 
+            btn_Dinner.BackColor = Color.Transparent;
+            btn_Dinner.BackgroundImageLayout = ImageLayout.Stretch;
+            btn_Dinner.ImageIndex = 1;
+            btn_Dinner.ImageList = ımageList1;
+            btn_Dinner.Location = new Point(122, 22);
+            btn_Dinner.Margin = new Padding(3, 2, 3, 2);
+            btn_Dinner.Name = "btn_Dinner";
+            btn_Dinner.Size = new Size(40, 34);
+            btn_Dinner.TabIndex = 32;
+            btn_Dinner.UseVisualStyleBackColor = false;
+            btn_Dinner.Click += btn_Dinner_Click;
+            // 
+            // label18
+            // 
+            label18.AutoSize = true;
+            label18.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label18.Location = new Point(53, 47);
+            label18.Name = "label18";
+            label18.Size = new Size(29, 15);
+            label18.TabIndex = 7;
+            label18.Text = "kcal";
+            // 
+            // label19
+            // 
+            label19.AutoSize = true;
+            label19.BackColor = Color.Transparent;
+            label19.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            label19.ForeColor = Color.Black;
+            label19.Location = new Point(11, 6);
+            label19.Name = "label19";
+            label19.Size = new Size(50, 19);
+            label19.TabIndex = 4;
+            label19.Text = "Akşam";
+            // 
+            // label20
+            // 
+            label20.AutoSize = true;
+            label20.BackColor = Color.Transparent;
+            label20.Font = new Font("Segoe UI Semibold", 8.8F, FontStyle.Bold, GraphicsUnit.Point);
+            label20.ForeColor = Color.DarkSlateGray;
+            label20.Location = new Point(13, 26);
+            label20.Name = "label20";
+            label20.Size = new Size(41, 15);
+            label20.TabIndex = 4;
+            label20.Text = "Alınan";
+            // 
+            // lblDinnerCalorie
+            // 
+            lblDinnerCalorie.AutoSize = true;
+            lblDinnerCalorie.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            lblDinnerCalorie.Location = new Point(25, 44);
+            lblDinnerCalorie.Name = "lblDinnerCalorie";
+            lblDinnerCalorie.Size = new Size(17, 19);
+            lblDinnerCalorie.TabIndex = 5;
+            lblDinnerCalorie.Text = "0";
+            // 
+            // label12
+            // 
+            label12.AutoSize = true;
+            label12.BackColor = Color.Transparent;
+            label12.Font = new Font("Segoe UI Semibold", 11.2F, FontStyle.Bold, GraphicsUnit.Point);
+            label12.Location = new Point(93, 560);
+            label12.Name = "label12";
+            label12.Size = new Size(79, 20);
+            label12.TabIndex = 2;
+            label12.Text = "Tüketilen :";
+            // 
             // UserMainForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(1008, 729);
-            Controls.Add(groupBox3);
-            Controls.Add(groupBox2);
-            Controls.Add(groupBox4);
+            Controls.Add(pnlDinner);
+            Controls.Add(pnlSnack);
+            Controls.Add(pnlLunch);
+            Controls.Add(pnlBreakfast);
             Controls.Add(groupBox5);
-            Controls.Add(dateTimePicker1);
             Controls.Add(panel1);
             Controls.Add(lblName);
             Controls.Add(label1);
             Controls.Add(pictureBox1);
-            Controls.Add(groupBox1);
             Controls.Add(label5);
-            Controls.Add(lblCalorie);
+            Controls.Add(lblSumCalorie);
+            Controls.Add(label12);
             Controls.Add(pictureBox3);
             Name = "UserMainForm";
             StartPosition = FormStartPosition.CenterParent;
             Text = "UserMainForm";
-            groupBox3.ResumeLayout(false);
-            groupBox3.PerformLayout();
-            groupBox2.ResumeLayout(false);
-            groupBox2.PerformLayout();
-            groupBox4.ResumeLayout(false);
-            groupBox4.PerformLayout();
             groupBox5.ResumeLayout(false);
             groupBox5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pbGlass10).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pbGlass5).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pbGlass9).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pbGlass4).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pbGlass8).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pbGlass3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pbGlass7).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pbGlass2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pbGlass6).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pbGlass1).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pbProfile).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pbTrendies).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pbDaily).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            groupBox1.ResumeLayout(false);
-            groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox9).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox10).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox11).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox12).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox13).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox14).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox15).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+            pnlBreakfast.ResumeLayout(false);
+            pnlBreakfast.PerformLayout();
+            pnlLunch.ResumeLayout(false);
+            pnlLunch.PerformLayout();
+            pnlSnack.ResumeLayout(false);
+            pnlSnack.PerformLayout();
+            pnlDinner.ResumeLayout(false);
+            pnlDinner.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -742,41 +790,32 @@
         #endregion
 
         private GroupBox groupBox3;
-        private Label label19;
-        private Button button6;
+        private Button btnDinner;
         private ImageList ımageList1;
-        private Label label13;
-        private Label label14;
         private GroupBox groupBox2;
-        private Label label18;
-        private Button button5;
-        private Label label11;
-        private Label label12;
+        private Button btnLunch;
         private GroupBox groupBox4;
-        private Label label20;
-        private Button button7;
-        private Label label15;
-        private Label label16;
+        private Button btnSnack;
         private GroupBox groupBox5;
-        private PictureBox pictureBox12;
-        private PictureBox pictureBox6;
-        private PictureBox pictureBox11;
-        private PictureBox pictureBox5;
-        private PictureBox pictureBox10;
-        private PictureBox pictureBox2;
-        private PictureBox pictureBox9;
-        private PictureBox pictureBox8;
-        private PictureBox pictureBox7;
-        private PictureBox pictureBox4;
+        private PictureBox pbGlass10;
+        private PictureBox pbGlass5;
+        private PictureBox pbGlass9;
+        private PictureBox pbGlass4;
+        private PictureBox pbGlass8;
+        private PictureBox pbGlass3;
+        private PictureBox pbGlass7;
+        private PictureBox pbGlass2;
+        private PictureBox pbGlass6;
+        private PictureBox pbGlass1;
         private Label label6;
         private Label label21;
         private Label label8;
         private Label label7;
         private DateTimePicker dateTimePicker1;
         private Panel panel1;
-        private PictureBox pictureBox15;
-        private PictureBox pictureBox14;
-        private PictureBox pictureBox13;
+        private PictureBox pbProfile;
+        private PictureBox pbTrendies;
+        private PictureBox pbDaily;
         private Label label2;
         private Label label4;
         private Label label3;
@@ -785,11 +824,35 @@
         private PictureBox pictureBox1;
         private GroupBox groupBox1;
         private Label label17;
-        private Button button4;
-        private Label label10;
-        private Label label9;
+        private Button btnBreakfast;
         private Label label5;
-        private Label lblCalorie;
+        private Label lblSumCalorie;
         private PictureBox pictureBox3;
+        private Panel pnlBreakfast;
+        private Label label24;
+        private Label label22;
+        private Label lblBreakfastClorie;
+        private Panel pnlLunch;
+        private Label label9;
+        private Label label10;
+        // private Button btnLunch;
+        private Label label11;
+        private Label lblLunchCalorie;
+        private Panel pnlSnack;
+        private Label label13;
+        private Label label14;
+        // private Button btnSnack;
+        private Label label15;
+        private Label lblSnackClorie;
+        private Panel pnlDinner;
+        private Label label18;
+        private Label label19;
+        //private Button btnDinner;
+        private Label label20;
+        private Label lblDinnerCalorie;
+        private Label label12;
+        private Button btn_Lunch;
+        private Button btn_Snack;
+        private Button btn_Dinner;
     }
 }

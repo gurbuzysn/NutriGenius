@@ -17,9 +17,27 @@ namespace NutriGeniusForm
             InitializeComponent();
         }
 
-        private void label4_Click(object sender, EventArgs e)
-        {
 
+
+        private void btnBreakfast_Click(object sender, EventArgs e)
+        {
+            new FoodForm().ShowDialog();
+            lblMealName
+        }
+
+        private void btn_Lunch_Click(object sender, EventArgs e)
+        {
+            new FoodForm().ShowDialog();
+        }
+
+        private void btn_Dinner_Click(object sender, EventArgs e)
+        {
+            new FoodForm().ShowDialog();
+        }
+
+        private void btn_Snack_Click(object sender, EventArgs e)
+        {
+            new FoodForm().ShowDialog();
         }
     }
 }
