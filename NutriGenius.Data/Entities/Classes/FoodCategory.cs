@@ -13,7 +13,9 @@ namespace NutriGenius.Data.Entities.Classes
         public string CategoryName { get; set; } = null!;
 
 
-
-        public List<Food> Foods { get; set; } = new();
+        public override string ToString()
+        {
+            return $"{CategoryName}";
+        }
     }
 }

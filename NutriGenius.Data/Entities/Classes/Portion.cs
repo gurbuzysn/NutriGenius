@@ -18,8 +18,11 @@ namespace NutriGenius.Data.Entities.Classes
         public double? Calorie { get; set; }
 
 
+        public List<UserMealFoodPortion> UserMealFoodPortions { get; set; } = new();
 
-
-        public List<Food> Foods { get; set; } = new();
+        public override string ToString()
+        {
+            return $"{Unit}";
+        }
     }
 }

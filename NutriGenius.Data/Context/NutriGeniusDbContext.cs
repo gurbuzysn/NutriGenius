@@ -21,6 +21,9 @@ namespace NutriGenius.Data.Context
         public DbSet<Portion> Portions => Set<Portion>();
         public DbSet<FoodCategory> FoodCategories => Set<FoodCategory>();
 
+
+        public DbSet<UserMealFoodPortion> UserMealFoodPortions => Set<UserMealFoodPortion>();  // 4 lü ara tablo eklendi
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer(@"server=(localdb)\mssqllocaldb;database=NutriGeniusDb; trusted_connection=true");
@@ -28,6 +31,31 @@ namespace NutriGenius.Data.Context
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+           
+            modelBuilder.Entity<UserMealFoodPortion>().HasKey(uf => new { uf.UserId, uf.MealId, uf.FoodId, uf.PortionId });
+
+            modelBuilder.Entity<UserMealFoodPortion>()
+                .HasOne(uf => uf.User)
+                .WithMany(u => u.UserMealFoodPortions)
+                .HasForeignKey(uf => uf.UserId);
+
+            modelBuilder.Entity<UserMealFoodPortion>()
+                .HasOne(uf => uf.Meal)
+                .WithMany(m => m.UserMealFoodPortions)
+                .HasForeignKey(uf => uf.MealId);
+
+            modelBuilder.Entity<UserMealFoodPortion>()
+                .HasOne(uf => uf.Food)
+                .WithMany(f => f.UserMealFoodPortions)
+                .HasForeignKey(uf => uf.FoodId);
+
+            modelBuilder.Entity<UserMealFoodPortion>()
+                .HasOne(uf => uf.Portion)
+                .WithMany(p => p.UserMealFoodPortions)
+                .HasForeignKey(uf => uf.PortionId);
+
+
+
             modelBuilder.Entity<FoodCategory>().HasData(
                 new FoodCategory { Id = 1, CategoryName = "Et Yemekleri" },
                 new FoodCategory { Id = 2, CategoryName = "Sebze Yemekleri" },
@@ -43,6 +71,9 @@ namespace NutriGenius.Data.Context
                 new FoodCategory { Id = 12, CategoryName = "Süt Ürünleri" },
                 new FoodCategory { Id = 13, CategoryName = "Tahıl Ürünleri" }
                 );
+
+
+
         }
     }
 }

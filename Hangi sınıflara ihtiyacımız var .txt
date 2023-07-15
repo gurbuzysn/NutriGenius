@@ -1,0 +1,94 @@
+1.Adım EF paketlerinin yüklenmesi******************************************************************
+
+Install-Package Microsoft.EntityFrameworkCore -v 6.0.18
+Install-Package Microsoft.EntityFrameworkCore.SqlServer -v 6.0.18
+Install-Package Microsoft.EntityFrameworkCore.Tools -v 6.0.18
+
+
+
+2.Adım Sınıfların Oluşturulması******************************************************************
+
+User (Kullanıcı) => Id, UserName, FirstName, LastName, Email, Password,BirthDate, Gender, Weight, Height, Meals  
+
+Meal (Öğün) => Id, MealName, MealDate Calorie, Users, Foods
+    Breakfast (Kahvaltı), Lunch (Öğle), Dinner (Akşam), Snack (Ara Öğün) 
+
+Food (Yemek) => Id, FoodName, PortionId, Portion, FoodCategoryId, FoodCategory, Meals
+
+Portion (Porsiyon) => Id, Amount, Unit, Calorie, Foods
+
+FoodCategory => Id, CategoryName, Foods
+
+
+
+3.Adım Context sınıfının oluşturulması******************************************************************
+
+
+
+@"server=(localdb)\mssqllocaldb;database=NutriGeniusDb;trusted_connection=true"
+
+
+
+
+4.Adım Seed Dataların oluşturulması******************************************************************
+
+
+
+
+
+
+
+
+
+5.Adım Migration******************************************************************
+
+6. Form Dosyalarının Açılması
+
+
+
+
+
+
+Hangi sınıflara ihtiyacımız var ?
+
+
+
+
+PROJE İÇERİĞİ:
+
+Açılış Ekranı
+
+Programı tanıtan bir sayfa olacak. Yeni kullanıcı yaratma ve kullanıcı 
+girişi imkânı olacak. Her kullanıcı kendini sisteme kullanıcı adı ve şifresi 
+ile ekleyebilmeli. Aynı kullanıcı adı ile tekrardan yeni kayıt açılmamalı.
+Kullanıcı adı olarak eposta adresi kabul edeceğiz. Şifrelerin de kolay 
+tahmin edilemeyen ve güvenli olması gerekiyor.
+
+Temel Öğeler
+
+Kullanmaya başlamadan önce bazı temel öğeleri programa tanıtmak 
+gerekecek; Öğünler, Yemek Kategorileri, Porsiyon, vs. Sonrasında 
+yemek çeşitlerini de işleyeceğiz. Yemekleri işlerken resimlerini de 
+ekleyebilmek istiyoruz.
+
+Öğün İşleme 
+
+Programa Login olan kullanıcı, ilgili gün yediği öğünleri görebilecek. 
+Yeni öğün yediğinde programa işleyebilecek. Yanlış giriş yaptı ise veya 
+ekstra bir şey yedi ise öğünde değişiklik yapacak veya tamamı ile o 
+öğünü silebilecek.
+
+Gün Sonu Raporu
+
+Gün sonunda kişisel olarak yediğimiz öğünlerde bulunan kaloriyi öğün 
+bazlı ve toplam olarak görmek isteriz.
+
+Kıyas Raporları
+
+Yediğimiz öğünleri haftalık/aylık bazda tüm kişiler ile öğün bazlı ve 
+yemek kategorisi bazlı kıyaslamasını raporlasın.
+
+Yemek Çeşidi Raporu
+
+Hangi yemeklerin hangi öğünlerde ne kadar yendiğini gösteren bir 
+rapor hazırlansın.En çok yenen yemekler raporu çıksın.

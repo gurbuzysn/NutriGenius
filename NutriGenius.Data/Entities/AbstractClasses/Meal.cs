@@ -19,9 +19,9 @@ namespace NutriGenius.Data.Entities.AbstractClasses
         public double? Calorie { get; set; }
 
 
+        public List<UserMealFoodPortion> UserMealFoodPortions { get; set; } = new();
 
-        public List<User> Users { get; set; } = new();
 
-        public List<Food> Foods { get; set; } = new();
+
     }
 }

@@ -1,4 +1,7 @@
-﻿using NutriGenius.Data.Context;
+﻿using Microsoft.EntityFrameworkCore;
+using NutriGenius.Data.Context;
+using NutriGenius.Data.Entities;
+using NutriGenius.Data.Entities.AbstractClasses;
 using NutriGenius.Data.Entities.Classes;
 using System;
 using System.Collections.Generic;
@@ -15,82 +18,89 @@ namespace NutriGeniusForm
     public partial class FoodForm : Form
     {
         NutriGeniusDbContext db = new NutriGeniusDbContext();
+        User user = SessionManager.CurrentUser;
+        Meal meal = SessionManager.CurrentMeal;
+
         public FoodForm()
         {
             InitializeComponent();
             ListFoodCategories();
+
+            lblMealName.Text = meal.MealName;
         }
 
         private void ListFoodCategories()
         {
-            cbFoodCategories.DataSource = null;
-            cbFoodCategories.DataSource = db.FoodCategories.ToList();
-            cbFoodCategories.DisplayMember = "CategoryName";
+            cbFoodCategories.Items.Clear();
+            foreach (FoodCategory foodCategory in db.FoodCategories)
+            {
+                cbFoodCategories.Items.Add(foodCategory);
+            }
+            cbFoodCategories.SelectedIndex = 0;
         }
+
         private void cbFoodCategories_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cbFoodCategories.SelectedIndex == -1) return;
-
-            UpdateList();
-            CheckControl();
+            ListFoods();
         }
 
-        private void UpdateList()
+        private void ListFoods()
         {
-            int foodCategoryId = ((FoodCategory)(cbFoodCategories.SelectedItem)).Id;
-            clbFoods.Items.Clear();
-
-            foreach (var food in db.Foods.Where(x => x.FoodCategoryId == foodCategoryId))
+            cbFoods.Items.Clear();
+            IQueryable selectedCategoriesFoods = db.Foods.Where(f => f.FoodCategoryId == ((FoodCategory)(cbFoodCategories.SelectedItem)).Id);
+            //Kategorilerde seçili olan kategoriye ait yemekleri getir
+            foreach (Food food in selectedCategoriesFoods)
             {
-                clbFoods.Items.Add(food);
+                cbFoods.Items.Add(food);
             }
         }
 
-        private void CheckControl()
+        private void cbFoods_SelectedIndexChanged(object sender, EventArgs e)
         {
-            clbFoods.ItemCheck -= clbFoods_ItemCheck;
-
-            foreach (Food item in lstFoods.Items)
-            {
-                if (clbFoods.Items.Contains(item))
-                {
-                    int index = clbFoods.Items.IndexOf(item);
-                    clbFoods.SetItemCheckState(index, CheckState.Checked);
-                }
-            }
-
-            clbFoods.ItemCheck += clbFoods_ItemCheck;
+            ListPortions();
         }
 
-        private void clbFoods_ItemCheck(object sender, ItemCheckEventArgs e)
+        private void ListPortions()
         {
-            Food food = (Food)clbFoods.SelectedItem;
+            cbPortions.Items.Clear();
 
-            if (e.NewValue == CheckState.Checked)
-            {
-                lstFoods.Items.Add(food);
-            }
-            else if (e.NewValue == CheckState.Unchecked)
-            {
-                lstFoods.Items.Remove(food);
-            }
+            List<Portion> portions = new List<Portion>();
+            portions = db.Foods
+                .Include(f => f.Portions)
+                .FirstOrDefault(f => f.Id == ((Food)(cbFoods.SelectedItem)).Id)!.Portions.ToList();
 
+            foreach (var item in portions)
+            {
+                cbPortions.Items.Add(item);
+            }
         }
 
-        private void btnAddFood_Click(object sender, EventArgs e)
+
+
+
+
+        private void btnAddFood_Click(object sender, EventArgs e)  // Yeni Yemek Ekleme Sayfası Açılacak
         {
             new UserAddFoodForm().ShowDialog();
-            UpdateList();
+        }
+
+        private void btnSaveFoods_Click(object sender, EventArgs e)  // Seçtiği yemekleri veri tabanındaki kendi user ının öğünlerine ekleyecek
+        {
+
 
         }
 
-        private void btnSaveFoods_Click(object sender, EventArgs e)
+        private void btnAdd_Click(object sender, EventArgs e)
         {
-            if (lstFoods.Items.Count == 0) return;   // Seçili yoksa Tokat!
+            FoodCategory foodCategory = ((FoodCategory)(cbFoodCategories.SelectedItem));
+            Food food = ((Food)(cbFoods.SelectedItem));
+            Portion portion = ((Portion)(cbPortions.SelectedItem));
+            int piece = (int)nudPiece.Value;
 
-            //User currentUser 
 
-            //db.Users.
+
+
         }
     }
 }

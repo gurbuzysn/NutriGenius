@@ -31,40 +31,31 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainMenu));
             btnSignIn = new Button();
             btnLogin = new Button();
-            label1 = new Label();
             SuspendLayout();
             // 
             // btnSignIn
             // 
+            btnSignIn.BackColor = Color.RosyBrown;
             btnSignIn.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            btnSignIn.Location = new Point(344, 582);
+            btnSignIn.Location = new Point(725, 679);
             btnSignIn.Name = "btnSignIn";
             btnSignIn.Size = new Size(271, 38);
             btnSignIn.TabIndex = 0;
-            btnSignIn.Text = "Sağlık Yolculuğunu Başlat";
-            btnSignIn.UseVisualStyleBackColor = true;
+            btnSignIn.Text = "Kayıt Ol";
+            btnSignIn.UseVisualStyleBackColor = false;
             btnSignIn.Click += btnSignIn_Click;
             // 
             // btnLogin
             // 
+            btnLogin.BackColor = Color.RosyBrown;
             btnLogin.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            btnLogin.Location = new Point(510, 626);
+            btnLogin.Location = new Point(365, 319);
             btnLogin.Name = "btnLogin";
-            btnLogin.Size = new Size(105, 38);
+            btnLogin.Size = new Size(257, 115);
             btnLogin.TabIndex = 1;
             btnLogin.Text = "Giriş Yap";
-            btnLogin.UseVisualStyleBackColor = true;
+            btnLogin.UseVisualStyleBackColor = false;
             btnLogin.Click += btnLogin_Click;
-            // 
-            // label1
-            // 
-            label1.BackColor = Color.Transparent;
-            label1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(344, 635);
-            label1.Name = "label1";
-            label1.Size = new Size(160, 38);
-            label1.TabIndex = 2;
-            label1.Text = "Zaten hesabım var";
             // 
             // MainMenu
             // 
@@ -73,7 +64,6 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1008, 729);
-            Controls.Add(label1);
             Controls.Add(btnLogin);
             Controls.Add(btnSignIn);
             DoubleBuffered = true;
@@ -87,6 +77,5 @@
 
         private Button btnSignIn;
         private Button btnLogin;
-        private Label label1;
     }
 }

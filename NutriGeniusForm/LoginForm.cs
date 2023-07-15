@@ -1,5 +1,6 @@
 ﻿
 using NutriGenius.Data.Context;
+using NutriGenius.Data.Entities;
 using NutriGenius.Data.Entities.Classes;
 
 using System;
@@ -16,6 +17,7 @@ namespace NutriGeniusForm
 {
     public partial class LoginForm : Form
     {
+        NutriGeniusDbContext db = new NutriGeniusDbContext();
 
         public LoginForm()
         {
@@ -26,20 +28,23 @@ namespace NutriGeniusForm
 
         private void btnLogın_Click(object sender, EventArgs e)
         {
-            using (var db = new NutriGeniusDbContext())
+            if (string.IsNullOrEmpty(txtUserName.Text) || string.IsNullOrEmpty(txtPassword.Text))
             {
-                logInUser = new User();
-
-
-                if (logInUser.LogIn(db, txtUserName.Text, txtPassword.Text))
-                {
-                    logInUser = db.Users.FirstOrDefault(u => u.UserName == txtUserName.Text);
-                        new UserMainForm(logInUser).ShowDialog();
-
-                }
-                else
-                    MessageBox.Show("Şifre veya kullanıcı hatalıdır!");
+                MessageBox.Show("Kullanıcı adı veya şifre boş olamaz!+");
+                return;
             }
+
+            logInUser = new User();
+
+            if (logInUser.LogIn(db, txtUserName.Text, txtPassword.Text))
+            {
+                logInUser = db.Users.FirstOrDefault(u => u.UserName == txtUserName.Text);
+                SessionManager.CurrentUser = logInUser!;
+                new UserMainForm().ShowDialog();
+
+            }
+            else
+                MessageBox.Show("Şifre veya kullanıcı hatalıdır!");
         }
 
 

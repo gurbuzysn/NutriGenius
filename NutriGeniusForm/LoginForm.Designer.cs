@@ -39,28 +39,30 @@
             // label1
             // 
             label1.BackColor = Color.Transparent;
-            label1.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Italic, GraphicsUnit.Point);
+            label1.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(384, 533);
+            label1.Location = new Point(368, 480);
             label1.Name = "label1";
-            label1.Size = new Size(274, 125);
+            label1.Size = new Size(340, 197);
             label1.TabIndex = 0;
             label1.Text = "\"NutriGenius, sağlıklı beslenme yolcuğunuzda günlük kalori alımlarınızı takip ederek sizin için muhteşem bir yol arkadaşı ve motivasyon kaynağı olur!\"";
             label1.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // txtUserName
             // 
-            txtUserName.Location = new Point(494, 357);
+            txtUserName.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            txtUserName.Location = new Point(473, 314);
             txtUserName.Name = "txtUserName";
-            txtUserName.Size = new Size(164, 23);
+            txtUserName.Size = new Size(219, 29);
             txtUserName.TabIndex = 1;
             txtUserName.Text = "aveli@hotmail.com";
             // 
             // txtPassword
             // 
-            txtPassword.Location = new Point(494, 386);
+            txtPassword.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            txtPassword.Location = new Point(473, 349);
             txtPassword.Name = "txtPassword";
-            txtPassword.Size = new Size(164, 23);
+            txtPassword.Size = new Size(219, 29);
             txtPassword.TabIndex = 1;
             txtPassword.Text = "123456aA";
             // 
@@ -68,11 +70,11 @@
             // 
             label2.AutoSize = true;
             label2.BackColor = Color.Transparent;
-            label2.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label2.ForeColor = Color.White;
-            label2.Location = new Point(384, 358);
+            label2.Location = new Point(377, 317);
             label2.Name = "label2";
-            label2.Size = new Size(63, 19);
+            label2.Size = new Size(71, 21);
             label2.TabIndex = 2;
             label2.Text = "E-Mail : ";
             // 
@@ -80,23 +82,24 @@
             // 
             label3.AutoSize = true;
             label3.BackColor = Color.Transparent;
-            label3.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            label3.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label3.ForeColor = Color.White;
-            label3.Location = new Point(384, 389);
+            label3.Location = new Point(377, 352);
             label3.Name = "label3";
-            label3.Size = new Size(52, 19);
+            label3.Size = new Size(57, 21);
             label3.TabIndex = 2;
             label3.Text = "Şifre : ";
             // 
             // btnLogın
             // 
+            btnLogın.BackColor = SystemColors.ActiveCaption;
             btnLogın.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            btnLogın.Location = new Point(494, 415);
+            btnLogın.Location = new Point(368, 398);
             btnLogın.Name = "btnLogın";
-            btnLogın.Size = new Size(164, 34);
+            btnLogın.Size = new Size(340, 57);
             btnLogın.TabIndex = 3;
             btnLogın.Text = "Giriş Yap";
-            btnLogın.UseVisualStyleBackColor = true;
+            btnLogın.UseVisualStyleBackColor = false;
             btnLogın.Click += btnLogın_Click;
             // 
             // LoginForm

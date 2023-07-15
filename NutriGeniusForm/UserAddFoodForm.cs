@@ -46,9 +46,10 @@ namespace NutriGeniusForm
                 if (string.IsNullOrEmpty(foodName) || string.IsNullOrEmpty(calorie) || cbFoodCategories.SelectedIndex == -1 || cbPortions.SelectedIndex == -1)
                 {
                     MessageBox.Show("Tüm alanlar doldurulmalıdır.");
+                    return;
                 }
 
-                if (db.Foods.Any(x => x.FoodName.Equals(foodName)))  // Aynı isimde yemek varsa Çık!
+                if (db.Foods.Any(x => x.FoodName.ToLower().Equals(foodName.ToLower())))  // Aynı isimde yemek varsa Çık!
                 {
                     MessageBox.Show("Bu yemek zaten mevcut!");
                     return;

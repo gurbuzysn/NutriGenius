@@ -16,6 +16,7 @@ namespace NutriGeniusForm
 {
     public partial class SignInForm : Form
     {
+        NutriGeniusDbContext db = new NutriGeniusDbContext();
         public SignInForm()
         {
             InitializeComponent();
@@ -23,8 +24,7 @@ namespace NutriGeniusForm
 
         private void btnSignIn_Click(object sender, EventArgs e)
         {
-            using (var db = new NutriGeniusDbContext())
-            {
+            
                 try
                 {
                     if (string.IsNullOrEmpty(txtFirstName.Text) ||
@@ -92,7 +92,7 @@ namespace NutriGeniusForm
                         MessageBox.Show("Hata oluştu. Hata Mesajı: " + ex.Message);
                     }
                 }
-            }
+            
         }
 
         private static void OpenLoginForm()

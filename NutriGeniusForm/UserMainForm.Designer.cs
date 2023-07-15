@@ -84,6 +84,7 @@
             label20 = new Label();
             lblDinnerCalorie = new Label();
             label12 = new Label();
+            dtpDate = new DateTimePicker();
             groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pbGlass10).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pbGlass5).BeginInit();
@@ -317,6 +318,7 @@
             pbProfile.SizeMode = PictureBoxSizeMode.Zoom;
             pbProfile.TabIndex = 27;
             pbProfile.TabStop = false;
+            pbProfile.Click += pbProfile_Click;
             // 
             // pbTrendies
             // 
@@ -734,12 +736,21 @@
             label12.TabIndex = 2;
             label12.Text = "Tüketilen :";
             // 
+            // dtpDate
+            // 
+            dtpDate.Format = DateTimePickerFormat.Short;
+            dtpDate.Location = new Point(801, 39);
+            dtpDate.Name = "dtpDate";
+            dtpDate.Size = new Size(168, 23);
+            dtpDate.TabIndex = 31;
+            // 
             // UserMainForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(1008, 729);
+            Controls.Add(dtpDate);
             Controls.Add(pnlDinner);
             Controls.Add(pnlSnack);
             Controls.Add(pnlLunch);
@@ -854,5 +865,6 @@
         private Button btn_Lunch;
         private Button btn_Snack;
         private Button btn_Dinner;
+        private DateTimePicker dtpDate;
     }
 }
