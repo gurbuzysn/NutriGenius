@@ -28,13 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FoodForm));
             cbFoodCategories = new ComboBox();
             label2 = new Label();
             btnSaveFoods = new Button();
             lblMealName = new Label();
-            label3 = new Label();
-            btnAddFood = new Button();
+            btnAddNewFood = new Button();
             label1 = new Label();
             cbFoods = new ComboBox();
             label4 = new Label();
@@ -42,15 +42,19 @@
             label5 = new Label();
             btnAdd = new Button();
             nudPiece = new NumericUpDown();
-            dgvSelectedFoods = new DataGridView();
+            dgvFoods = new DataGridView();
+            btnDelete = new Button();
             ((System.ComponentModel.ISupportInitialize)nudPiece).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dgvSelectedFoods).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvFoods).BeginInit();
             SuspendLayout();
             // 
             // cbFoodCategories
             // 
+            cbFoodCategories.DisplayMember = "CategoryName";
+            cbFoodCategories.DropDownStyle = ComboBoxStyle.DropDownList;
             cbFoodCategories.FormattingEnabled = true;
-            cbFoodCategories.Location = new Point(30, 289);
+            cbFoodCategories.Location = new Point(30, 298);
+            cbFoodCategories.Margin = new Padding(4, 3, 4, 3);
             cbFoodCategories.Name = "cbFoodCategories";
             cbFoodCategories.Size = new Size(395, 23);
             cbFoodCategories.TabIndex = 1;
@@ -59,20 +63,22 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.Location = new Point(30, 265);
+            label2.Font = new Font("Segoe UI", 16F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.Location = new Point(30, 255);
+            label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
-            label2.Size = new Size(95, 21);
+            label2.Size = new Size(129, 30);
             label2.TabIndex = 0;
             label2.Text = "Kategoriler";
             // 
             // btnSaveFoods
             // 
-            btnSaveFoods.BackColor = Color.Orange;
-            btnSaveFoods.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            btnSaveFoods.Location = new Point(582, 620);
+            btnSaveFoods.BackColor = Color.DarkOrange;
+            btnSaveFoods.Font = new Font("Segoe UI", 16F, FontStyle.Bold, GraphicsUnit.Point);
+            btnSaveFoods.Location = new Point(582, 549);
+            btnSaveFoods.Margin = new Padding(4, 3, 4, 3);
             btnSaveFoods.Name = "btnSaveFoods";
-            btnSaveFoods.Size = new Size(379, 37);
+            btnSaveFoods.Size = new Size(379, 41);
             btnSaveFoods.TabIndex = 4;
             btnSaveFoods.Text = "Kaydet";
             btnSaveFoods.UseVisualStyleBackColor = false;
@@ -80,53 +86,48 @@
             // 
             // lblMealName
             // 
-            lblMealName.BackColor = Color.Transparent;
+            lblMealName.BackColor = Color.DarkOrange;
             lblMealName.BorderStyle = BorderStyle.FixedSingle;
             lblMealName.Font = new Font("Segoe UI", 16F, FontStyle.Bold, GraphicsUnit.Point);
-            lblMealName.Location = new Point(717, 124);
+            lblMealName.Location = new Point(704, 215);
+            lblMealName.Margin = new Padding(4, 0, 4, 0);
             lblMealName.Name = "lblMealName";
             lblMealName.Size = new Size(123, 42);
             lblMealName.TabIndex = 0;
             lblMealName.Text = "label1";
             lblMealName.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // label3
+            // btnAddNewFood
             // 
-            label3.AutoSize = true;
-            label3.BackColor = Color.Transparent;
-            label3.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.Location = new Point(727, 252);
-            label3.Name = "label3";
-            label3.Size = new Size(85, 21);
-            label3.TabIndex = 0;
-            label3.Text = "Seçilenler";
-            // 
-            // btnAddFood
-            // 
-            btnAddFood.BackColor = Color.YellowGreen;
-            btnAddFood.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            btnAddFood.Location = new Point(30, 620);
-            btnAddFood.Name = "btnAddFood";
-            btnAddFood.Size = new Size(395, 37);
-            btnAddFood.TabIndex = 5;
-            btnAddFood.Text = "Aradığım Yemek Listede Yok";
-            btnAddFood.UseVisualStyleBackColor = false;
-            btnAddFood.Click += btnAddFood_Click;
+            btnAddNewFood.BackColor = Color.DarkSeaGreen;
+            btnAddNewFood.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnAddNewFood.Location = new Point(30, 680);
+            btnAddNewFood.Margin = new Padding(4, 3, 4, 3);
+            btnAddNewFood.Name = "btnAddNewFood";
+            btnAddNewFood.Size = new Size(396, 37);
+            btnAddNewFood.TabIndex = 5;
+            btnAddNewFood.Text = "Aradığım Yemek Listede Yok";
+            btnAddNewFood.UseVisualStyleBackColor = false;
+            btnAddNewFood.Click += btnAddNewFood_Click;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(30, 337);
+            label1.Font = new Font("Segoe UI", 16F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Location = new Point(30, 334);
+            label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(81, 21);
+            label1.Size = new Size(107, 30);
             label1.TabIndex = 0;
             label1.Text = "Yemekler";
             // 
             // cbFoods
             // 
+            cbFoods.DisplayMember = "FoodName";
+            cbFoods.DropDownStyle = ComboBoxStyle.DropDownList;
             cbFoods.FormattingEnabled = true;
-            cbFoods.Location = new Point(30, 361);
+            cbFoods.Location = new Point(30, 367);
+            cbFoods.Margin = new Padding(4, 3, 4, 3);
             cbFoods.Name = "cbFoods";
             cbFoods.Size = new Size(395, 23);
             cbFoods.TabIndex = 1;
@@ -135,64 +136,100 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label4.Location = new Point(30, 411);
+            label4.Font = new Font("Segoe UI", 16F, FontStyle.Bold, GraphicsUnit.Point);
+            label4.Location = new Point(30, 402);
+            label4.Margin = new Padding(4, 0, 4, 0);
             label4.Name = "label4";
-            label4.Size = new Size(77, 21);
+            label4.Size = new Size(102, 30);
             label4.TabIndex = 0;
             label4.Text = "Porsiyon";
             // 
             // cbPortions
             // 
+            cbPortions.DisplayMember = "Unit";
+            cbPortions.DropDownStyle = ComboBoxStyle.DropDownList;
             cbPortions.FormattingEnabled = true;
             cbPortions.Location = new Point(30, 435);
+            cbPortions.Margin = new Padding(4, 3, 4, 3);
             cbPortions.Name = "cbPortions";
             cbPortions.Size = new Size(395, 23);
             cbPortions.TabIndex = 1;
-            cbPortions.SelectedIndexChanged += cbFoodCategories_SelectedIndexChanged;
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label5.Location = new Point(30, 483);
+            label5.Font = new Font("Segoe UI", 16F, FontStyle.Bold, GraphicsUnit.Point);
+            label5.Location = new Point(30, 474);
+            label5.Margin = new Padding(4, 0, 4, 0);
             label5.Name = "label5";
-            label5.Size = new Size(46, 21);
+            label5.Size = new Size(63, 30);
             label5.TabIndex = 0;
             label5.Text = "Adet";
             // 
             // btnAdd
             // 
-            btnAdd.BackColor = Color.Orange;
-            btnAdd.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            btnAdd.Location = new Point(30, 567);
+            btnAdd.BackColor = Color.DarkOrange;
+            btnAdd.Font = new Font("Segoe UI", 16F, FontStyle.Bold, GraphicsUnit.Point);
+            btnAdd.Location = new Point(30, 549);
+            btnAdd.Margin = new Padding(4, 3, 4, 3);
             btnAdd.Name = "btnAdd";
-            btnAdd.Size = new Size(395, 35);
+            btnAdd.Size = new Size(396, 41);
             btnAdd.TabIndex = 4;
             btnAdd.Text = "Ekle";
             btnAdd.UseVisualStyleBackColor = false;
-            btnAdd.Click += btnAdd_Click;
+            btnAdd.Click += btnAdd_Click_1;
             // 
             // nudPiece
             // 
             nudPiece.AutoSize = true;
-            nudPiece.Location = new Point(30, 518);
+            nudPiece.Location = new Point(30, 507);
+            nudPiece.Margin = new Padding(4, 3, 4, 3);
+            nudPiece.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
             nudPiece.Name = "nudPiece";
-            nudPiece.Size = new Size(395, 23);
+            nudPiece.Size = new Size(396, 23);
             nudPiece.TabIndex = 6;
             nudPiece.Value = new decimal(new int[] { 1, 0, 0, 0 });
             // 
-            // dgvSelectedFoods
+            // dgvFoods
             // 
-            dgvSelectedFoods.AllowUserToAddRows = false;
-            dgvSelectedFoods.AllowUserToDeleteRows = false;
-            dgvSelectedFoods.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvSelectedFoods.Location = new Point(582, 289);
-            dgvSelectedFoods.Name = "dgvSelectedFoods";
-            dgvSelectedFoods.ReadOnly = true;
-            dgvSelectedFoods.RowTemplate.Height = 25;
-            dgvSelectedFoods.Size = new Size(379, 325);
-            dgvSelectedFoods.TabIndex = 7;
+            dgvFoods.AllowUserToAddRows = false;
+            dgvFoods.AllowUserToDeleteRows = false;
+            dgvFoods.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvFoods.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            dgvFoods.BackgroundColor = Color.DarkSeaGreen;
+            dgvFoods.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = SystemColors.Window;
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.False;
+            dgvFoods.DefaultCellStyle = dataGridViewCellStyle1;
+            dgvFoods.Location = new Point(582, 298);
+            dgvFoods.Margin = new Padding(4, 3, 4, 3);
+            dgvFoods.MultiSelect = false;
+            dgvFoods.Name = "dgvFoods";
+            dgvFoods.ReadOnly = true;
+            dgvFoods.RowHeadersVisible = false;
+            dgvFoods.RowTemplate.Height = 25;
+            dgvFoods.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvFoods.Size = new Size(379, 232);
+            dgvFoods.TabIndex = 7;
+            // 
+            // btnDelete
+            // 
+            btnDelete.BackColor = Color.Red;
+            btnDelete.Font = new Font("Segoe UI", 16F, FontStyle.Bold, GraphicsUnit.Point);
+            btnDelete.ForeColor = Color.White;
+            btnDelete.Location = new Point(582, 596);
+            btnDelete.Margin = new Padding(4, 3, 4, 3);
+            btnDelete.Name = "btnDelete";
+            btnDelete.Size = new Size(379, 41);
+            btnDelete.TabIndex = 4;
+            btnDelete.Text = "Seçiliyi Sil";
+            btnDelete.UseVisualStyleBackColor = false;
+            btnDelete.Click += btnDelete_Click;
             // 
             // FoodForm
             // 
@@ -201,10 +238,11 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1008, 729);
-            Controls.Add(dgvSelectedFoods);
+            Controls.Add(dgvFoods);
             Controls.Add(nudPiece);
-            Controls.Add(btnAddFood);
+            Controls.Add(btnAddNewFood);
             Controls.Add(btnAdd);
+            Controls.Add(btnDelete);
             Controls.Add(btnSaveFoods);
             Controls.Add(label5);
             Controls.Add(cbFoods);
@@ -213,14 +251,15 @@
             Controls.Add(label4);
             Controls.Add(cbFoodCategories);
             Controls.Add(label2);
-            Controls.Add(label3);
             Controls.Add(lblMealName);
             DoubleBuffered = true;
+            Margin = new Padding(4, 3, 4, 3);
             Name = "FoodForm";
             StartPosition = FormStartPosition.CenterParent;
             Text = "FoodForm";
+            FormClosing += FoodForm_FormClosing;
             ((System.ComponentModel.ISupportInitialize)nudPiece).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dgvSelectedFoods).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvFoods).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -229,9 +268,8 @@
         private ComboBox cbFoodCategories;
         private Label label2;
         private Button btnSaveFoods;
-        private Label label3;
         public Label lblMealName;
-        private Button btnAddFood;
+        private Button btnAddNewFood;
         private Label label1;
         private ComboBox cbFoods;
         private Label label4;
@@ -239,6 +277,7 @@
         private Label label5;
         private Button btnAdd;
         private NumericUpDown nudPiece;
-        private DataGridView dgvSelectedFoods;
+        private DataGridView dgvFoods;
+        private Button btnDelete;
     }
 }

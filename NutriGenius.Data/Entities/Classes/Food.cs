@@ -18,8 +18,9 @@ namespace NutriGenius.Data.Entities.Classes
         public int FoodCategoryId { get; set; }
 
 
-        public List<UserMealFoodPortion> UserMealFoodPortions { get; set; } = new();
+        public FoodCategory FoodCategory { get; set; } = null!;
         public List<Portion> Portions { get; set; } = new();
+        public List<UserMealFoodPortion> UserMealFoodPortions { get; set; } = new();
 
 
         public override string ToString()

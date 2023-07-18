@@ -9,10 +9,10 @@ namespace NutriGenius.Data.Entities.Classes
     public class FoodCategory
     {
         public int Id { get; set; }
-
         public string CategoryName { get; set; } = null!;
 
 
+        public List<Food> Foods { get; set; } = new();
         public override string ToString()
         {
             return $"{CategoryName}";

@@ -20,9 +20,8 @@ namespace NutriGenius.Data.Context
         public DbSet<Snack> Snacks => Set<Snack>();
         public DbSet<Portion> Portions => Set<Portion>();
         public DbSet<FoodCategory> FoodCategories => Set<FoodCategory>();
-
-
         public DbSet<UserMealFoodPortion> UserMealFoodPortions => Set<UserMealFoodPortion>();  // 4 lü ara tablo eklendi
+
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -53,6 +52,14 @@ namespace NutriGenius.Data.Context
                 .HasOne(uf => uf.Portion)
                 .WithMany(p => p.UserMealFoodPortions)
                 .HasForeignKey(uf => uf.PortionId);
+
+
+            modelBuilder.Entity<User>()
+                .HasMany(uf => uf.UserMealFoodPortions)
+                .WithOne(uf => uf.User);
+
+            
+                
 
 
 

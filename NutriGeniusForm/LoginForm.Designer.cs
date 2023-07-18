@@ -34,6 +34,7 @@
             label2 = new Label();
             label3 = new Label();
             btnLogın = new Button();
+            btnSignIn = new Button();
             SuspendLayout();
             // 
             // label1
@@ -55,7 +56,7 @@
             txtUserName.Name = "txtUserName";
             txtUserName.Size = new Size(219, 29);
             txtUserName.TabIndex = 1;
-            txtUserName.Text = "aveli@hotmail.com";
+            txtUserName.Text = "gurbuzysn@hotmail.com";
             // 
             // txtPassword
             // 
@@ -93,7 +94,7 @@
             // btnLogın
             // 
             btnLogın.BackColor = SystemColors.ActiveCaption;
-            btnLogın.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            btnLogın.Font = new Font("Segoe UI", 16F, FontStyle.Bold, GraphicsUnit.Point);
             btnLogın.Location = new Point(368, 398);
             btnLogın.Name = "btnLogın";
             btnLogın.Size = new Size(340, 57);
@@ -102,6 +103,17 @@
             btnLogın.UseVisualStyleBackColor = false;
             btnLogın.Click += btnLogın_Click;
             // 
+            // btnSignIn
+            // 
+            btnSignIn.BackColor = Color.DarkSeaGreen;
+            btnSignIn.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnSignIn.Location = new Point(728, 680);
+            btnSignIn.Name = "btnSignIn";
+            btnSignIn.Size = new Size(268, 37);
+            btnSignIn.TabIndex = 3;
+            btnSignIn.Text = "Kayıt Ol";
+            btnSignIn.UseVisualStyleBackColor = false;
+            // 
             // LoginForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -109,6 +121,7 @@
             BackgroundImage = Properties.Resources.LogınForm;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1008, 729);
+            Controls.Add(btnSignIn);
             Controls.Add(btnLogın);
             Controls.Add(label3);
             Controls.Add(label2);
@@ -131,5 +144,6 @@
         private Label label2;
         private Label label3;
         private Button btnLogın;
+        private Button btnSignIn;
     }
 }

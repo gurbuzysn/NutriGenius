@@ -48,19 +48,14 @@
             label7 = new Label();
             panel1 = new Panel();
             pbProfile = new PictureBox();
-            pbTrendies = new PictureBox();
             pbDaily = new PictureBox();
             lblProfileName = new Label();
-            label4 = new Label();
             label3 = new Label();
             lblName = new Label();
-            label1 = new Label();
-            pictureBox1 = new PictureBox();
             label17 = new Label();
             btnBreakfast = new Button();
             label5 = new Label();
             lblSumCalorie = new Label();
-            pictureBox3 = new PictureBox();
             pnlBreakfast = new Panel();
             label24 = new Label();
             label22 = new Label();
@@ -83,8 +78,11 @@
             label19 = new Label();
             label20 = new Label();
             lblDinnerCalorie = new Label();
-            label12 = new Label();
             dtpDate = new DateTimePicker();
+            lstBreakfast = new ListBox();
+            lstLunch = new ListBox();
+            lstDinner = new ListBox();
+            lstSnack = new ListBox();
             groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pbGlass10).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pbGlass5).BeginInit();
@@ -98,10 +96,7 @@
             ((System.ComponentModel.ISupportInitialize)pbGlass1).BeginInit();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pbProfile).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pbTrendies).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pbDaily).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             pnlBreakfast.SuspendLayout();
             pnlLunch.SuspendLayout();
             pnlSnack.SuspendLayout();
@@ -134,7 +129,7 @@
             groupBox5.Controls.Add(label8);
             groupBox5.Controls.Add(label7);
             groupBox5.Font = new Font("Segoe UI Semibold", 9.2F, FontStyle.Bold, GraphicsUnit.Point);
-            groupBox5.Location = new Point(176, 503);
+            groupBox5.Location = new Point(169, 13);
             groupBox5.Margin = new Padding(3, 2, 3, 2);
             groupBox5.Name = "groupBox5";
             groupBox5.Padding = new Padding(3, 2, 3, 2);
@@ -297,11 +292,10 @@
             // 
             panel1.BackColor = Color.Gray;
             panel1.Controls.Add(pbProfile);
-            panel1.Controls.Add(pbTrendies);
             panel1.Controls.Add(pbDaily);
             panel1.Controls.Add(lblProfileName);
-            panel1.Controls.Add(label4);
             panel1.Controls.Add(label3);
+            panel1.Controls.Add(groupBox5);
             panel1.Dock = DockStyle.Bottom;
             panel1.Location = new Point(0, 604);
             panel1.Margin = new Padding(3, 2, 3, 2);
@@ -318,17 +312,6 @@
             pbProfile.SizeMode = PictureBoxSizeMode.Zoom;
             pbProfile.TabIndex = 27;
             pbProfile.TabStop = false;
-            pbProfile.Click += pbProfile_Click;
-            // 
-            // pbTrendies
-            // 
-            pbTrendies.Image = (Image)resources.GetObject("pbTrendies.Image");
-            pbTrendies.Location = new Point(136, 31);
-            pbTrendies.Name = "pbTrendies";
-            pbTrendies.Size = new Size(67, 46);
-            pbTrendies.SizeMode = PictureBoxSizeMode.Zoom;
-            pbTrendies.TabIndex = 27;
-            pbTrendies.TabStop = false;
             // 
             // pbDaily
             // 
@@ -345,22 +328,11 @@
             lblProfileName.AutoSize = true;
             lblProfileName.BackColor = Color.Transparent;
             lblProfileName.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            lblProfileName.Location = new Point(913, 78);
+            lblProfileName.Location = new Point(914, 80);
             lblProfileName.Name = "lblProfileName";
             lblProfileName.Size = new Size(43, 19);
             lblProfileName.TabIndex = 8;
             lblProfileName.Text = "Profil";
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.BackColor = Color.Transparent;
-            label4.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            label4.Location = new Point(143, 78);
-            label4.Name = "label4";
-            label4.Size = new Size(60, 19);
-            label4.TabIndex = 10;
-            label4.Text = "Trendler";
             // 
             // label3
             // 
@@ -377,35 +349,13 @@
             // 
             lblName.AutoSize = true;
             lblName.BackColor = Color.Transparent;
-            lblName.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            lblName.Location = new Point(402, 39);
+            lblName.Font = new Font("Segoe UI Semibold", 16F, FontStyle.Bold, GraphicsUnit.Point);
+            lblName.ForeColor = Color.RoyalBlue;
+            lblName.Location = new Point(26, 22);
             lblName.Name = "lblName";
-            lblName.Size = new Size(35, 19);
+            lblName.Size = new Size(97, 30);
             lblName.TabIndex = 15;
-            lblName.Text = "isim";
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.BackColor = Color.Transparent;
-            label1.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(325, 39);
-            label1.Name = "label1";
-            label1.Size = new Size(71, 20);
-            label1.TabIndex = 14;
-            label1.Text = "Merhaba";
-            // 
-            // pictureBox1
-            // 
-            pictureBox1.BackColor = Color.Transparent;
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(354, 61);
-            pictureBox1.Margin = new Padding(3, 2, 3, 2);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(59, 26);
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox1.TabIndex = 16;
-            pictureBox1.TabStop = false;
+            lblName.Text = "lblName";
             // 
             // label17
             // 
@@ -435,7 +385,8 @@
             // 
             label5.BackColor = Color.Transparent;
             label5.Font = new Font("Comic Sans MS", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
-            label5.Location = new Point(468, 169);
+            label5.ForeColor = Color.White;
+            label5.Location = new Point(456, 119);
             label5.Name = "label5";
             label5.Size = new Size(98, 23);
             label5.TabIndex = 19;
@@ -446,24 +397,14 @@
             // 
             lblSumCalorie.BackColor = Color.Transparent;
             lblSumCalorie.Font = new Font("Comic Sans MS", 14.8F, FontStyle.Bold, GraphicsUnit.Point);
-            lblSumCalorie.Location = new Point(478, 122);
+            lblSumCalorie.ForeColor = Color.White;
+            lblSumCalorie.Location = new Point(466, 72);
             lblSumCalorie.Name = "lblSumCalorie";
             lblSumCalorie.RightToLeft = RightToLeft.Yes;
             lblSumCalorie.Size = new Size(79, 47);
             lblSumCalorie.TabIndex = 18;
             lblSumCalorie.Text = "0";
             lblSumCalorie.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // pictureBox3
-            // 
-            pictureBox3.BackColor = Color.Transparent;
-            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(315, 30);
-            pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(410, 281);
-            pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox3.TabIndex = 27;
-            pictureBox3.TabStop = false;
             // 
             // pnlBreakfast
             // 
@@ -473,7 +414,7 @@
             pnlBreakfast.Controls.Add(btnBreakfast);
             pnlBreakfast.Controls.Add(label22);
             pnlBreakfast.Controls.Add(lblBreakfastClorie);
-            pnlBreakfast.Location = new Point(140, 369);
+            pnlBreakfast.Location = new Point(144, 173);
             pnlBreakfast.Name = "pnlBreakfast";
             pnlBreakfast.Size = new Size(169, 69);
             pnlBreakfast.TabIndex = 28;
@@ -486,9 +427,9 @@
             label24.ForeColor = Color.Black;
             label24.Location = new Point(11, 6);
             label24.Name = "label24";
-            label24.Size = new Size(47, 19);
+            label24.Size = new Size(60, 19);
             label24.TabIndex = 4;
-            label24.Text = "Sabah";
+            label24.Text = "Kahvaltı";
             // 
             // label22
             // 
@@ -520,7 +461,7 @@
             pnlLunch.Controls.Add(label10);
             pnlLunch.Controls.Add(label11);
             pnlLunch.Controls.Add(lblLunchCalorie);
-            pnlLunch.Location = new Point(330, 369);
+            pnlLunch.Location = new Point(334, 173);
             pnlLunch.Name = "pnlLunch";
             pnlLunch.Size = new Size(169, 69);
             pnlLunch.TabIndex = 29;
@@ -591,7 +532,7 @@
             pnlSnack.Controls.Add(label14);
             pnlSnack.Controls.Add(label15);
             pnlSnack.Controls.Add(lblSnackClorie);
-            pnlSnack.Location = new Point(707, 369);
+            pnlSnack.Location = new Point(711, 173);
             pnlSnack.Name = "pnlSnack";
             pnlSnack.Size = new Size(169, 69);
             pnlSnack.TabIndex = 30;
@@ -662,7 +603,7 @@
             pnlDinner.Controls.Add(label19);
             pnlDinner.Controls.Add(label20);
             pnlDinner.Controls.Add(lblDinnerCalorie);
-            pnlDinner.Location = new Point(521, 369);
+            pnlDinner.Location = new Point(525, 173);
             pnlDinner.Name = "pnlDinner";
             pnlDinner.Size = new Size(169, 69);
             pnlDinner.TabIndex = 29;
@@ -725,45 +666,70 @@
             lblDinnerCalorie.TabIndex = 5;
             lblDinnerCalorie.Text = "0";
             // 
-            // label12
-            // 
-            label12.AutoSize = true;
-            label12.BackColor = Color.Transparent;
-            label12.Font = new Font("Segoe UI Semibold", 11.2F, FontStyle.Bold, GraphicsUnit.Point);
-            label12.Location = new Point(93, 560);
-            label12.Name = "label12";
-            label12.Size = new Size(79, 20);
-            label12.TabIndex = 2;
-            label12.Text = "Tüketilen :";
-            // 
             // dtpDate
             // 
+            dtpDate.CalendarFont = new Font("Segoe UI", 26.25F, FontStyle.Regular, GraphicsUnit.Point);
             dtpDate.Format = DateTimePickerFormat.Short;
-            dtpDate.Location = new Point(801, 39);
+            dtpDate.Location = new Point(418, 28);
             dtpDate.Name = "dtpDate";
             dtpDate.Size = new Size(168, 23);
             dtpDate.TabIndex = 31;
+            // 
+            // lstBreakfast
+            // 
+            lstBreakfast.FormattingEnabled = true;
+            lstBreakfast.ItemHeight = 15;
+            lstBreakfast.Location = new Point(144, 270);
+            lstBreakfast.Name = "lstBreakfast";
+            lstBreakfast.Size = new Size(169, 169);
+            lstBreakfast.TabIndex = 32;
+            // 
+            // lstLunch
+            // 
+            lstLunch.FormattingEnabled = true;
+            lstLunch.ItemHeight = 15;
+            lstLunch.Location = new Point(334, 270);
+            lstLunch.Name = "lstLunch";
+            lstLunch.Size = new Size(169, 169);
+            lstLunch.TabIndex = 32;
+            // 
+            // lstDinner
+            // 
+            lstDinner.FormattingEnabled = true;
+            lstDinner.ItemHeight = 15;
+            lstDinner.Location = new Point(525, 270);
+            lstDinner.Name = "lstDinner";
+            lstDinner.Size = new Size(169, 169);
+            lstDinner.TabIndex = 32;
+            // 
+            // lstSnack
+            // 
+            lstSnack.FormattingEnabled = true;
+            lstSnack.ItemHeight = 15;
+            lstSnack.Location = new Point(711, 270);
+            lstSnack.Name = "lstSnack";
+            lstSnack.Size = new Size(169, 169);
+            lstSnack.TabIndex = 32;
             // 
             // UserMainForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1008, 729);
+            Controls.Add(lstSnack);
+            Controls.Add(lstDinner);
+            Controls.Add(lstLunch);
+            Controls.Add(lstBreakfast);
             Controls.Add(dtpDate);
             Controls.Add(pnlDinner);
             Controls.Add(pnlSnack);
             Controls.Add(pnlLunch);
             Controls.Add(pnlBreakfast);
-            Controls.Add(groupBox5);
             Controls.Add(panel1);
             Controls.Add(lblName);
-            Controls.Add(label1);
-            Controls.Add(pictureBox1);
             Controls.Add(label5);
             Controls.Add(lblSumCalorie);
-            Controls.Add(label12);
-            Controls.Add(pictureBox3);
             Name = "UserMainForm";
             StartPosition = FormStartPosition.CenterParent;
             Text = "UserMainForm";
@@ -782,10 +748,7 @@
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pbProfile).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pbTrendies).EndInit();
             ((System.ComponentModel.ISupportInitialize)pbDaily).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             pnlBreakfast.ResumeLayout(false);
             pnlBreakfast.PerformLayout();
             pnlLunch.ResumeLayout(false);
@@ -825,20 +788,15 @@
         private DateTimePicker dateTimePicker1;
         private Panel panel1;
         private PictureBox pbProfile;
-        private PictureBox pbTrendies;
         private PictureBox pbDaily;
         private Label lblProfileName;
-        private Label label4;
         private Label label3;
         private Label lblName;
-        private Label label1;
-        private PictureBox pictureBox1;
         private GroupBox groupBox1;
         private Label label17;
         private Button btnBreakfast;
         private Label label5;
         private Label lblSumCalorie;
-        private PictureBox pictureBox3;
         private Panel pnlBreakfast;
         private Label label24;
         private Label label22;
@@ -861,10 +819,13 @@
         //private Button btnDinner;
         private Label label20;
         private Label lblDinnerCalorie;
-        private Label label12;
         private Button btn_Lunch;
         private Button btn_Snack;
         private Button btn_Dinner;
         private DateTimePicker dtpDate;
+        private ListBox lstBreakfast;
+        private ListBox lstLunch;
+        private ListBox lstDinner;
+        private ListBox lstSnack;
     }
 }

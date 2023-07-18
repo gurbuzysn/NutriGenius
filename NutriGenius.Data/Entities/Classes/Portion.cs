@@ -22,7 +22,7 @@ namespace NutriGenius.Data.Entities.Classes
 
         public override string ToString()
         {
-            return $"{Unit}";
+            return Unit.ToString();
         }
     }
 }

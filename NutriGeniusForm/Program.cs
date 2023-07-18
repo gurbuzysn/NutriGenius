@@ -14,7 +14,7 @@ namespace NutriGeniusForm
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
             FoodSeed.Seed();
-            Application.Run(new MainMenu());
+            Application.Run(new LoginForm());
         }
     }
 }

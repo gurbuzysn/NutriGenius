@@ -67,6 +67,8 @@ namespace NutriGenius.Data.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("FoodCategoryId");
+
                     b.ToTable("Foods");
                 });
 
@@ -275,6 +277,17 @@ namespace NutriGenius.Data.Migrations
                     b.HasDiscriminator().HasValue("Snack");
                 });
 
+            modelBuilder.Entity("NutriGenius.Data.Entities.Classes.Food", b =>
+                {
+                    b.HasOne("NutriGenius.Data.Entities.Classes.FoodCategory", "FoodCategory")
+                        .WithMany("Foods")
+                        .HasForeignKey("FoodCategoryId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("FoodCategory");
+                });
+
             modelBuilder.Entity("NutriGenius.Data.Entities.Classes.Portion", b =>
                 {
                     b.HasOne("NutriGenius.Data.Entities.Classes.Food", null)
@@ -327,6 +340,11 @@ namespace NutriGenius.Data.Migrations
                     b.Navigation("Portions");
 
                     b.Navigation("UserMealFoodPortions");
+                });
+
+            modelBuilder.Entity("NutriGenius.Data.Entities.Classes.FoodCategory", b =>
+                {
+                    b.Navigation("Foods");
                 });
 
             modelBuilder.Entity("NutriGenius.Data.Entities.Classes.Portion", b =>

@@ -20,68 +20,101 @@ namespace NutriGeniusForm
     {
         NutriGeniusDbContext db = new NutriGeniusDbContext();
         User currentUser = SessionManager.CurrentUser;
-        Meal currentMeal;
+        Meal? currentMeal;
+        User? dbUser;
 
-        User dbUser;
+        List<UserMealFoodPortion>? userMeals;
 
         public UserMainForm()
         {
-
             InitializeComponent();
             ShowUserName();
+            LoadData();
+            GetUserMeal();
+            ListMeal();
+        }
+
+        private void ListMeal()
+        {
+            lstBreakfast.DataSource = null;
+            lstBreakfast.DataSource = db.Foods.Where(x => x.Id == 1).ToList();
+
+            
+        }
+
+        private void GetUserMeal()  // Mevcut Kullanıcının dtpDate de seçili olan tarihte yediği yemekler 
+        {
+            userMeals = dbUser?.UserMealFoodPortions.Where(x => x.Meal.MealDate == dtpDate.Value.Date).ToList();
+        }
+
+        private void LoadData()
+        {
+            dbUser = db.Users.Include(x => x.UserMealFoodPortions).ThenInclude(x => x.Meal).FirstOrDefault(x => x.UserName == currentUser.UserName);
         }
 
         private void ShowUserName()
         {
-            lblName.Text = lblProfileName.Text = currentUser.FirstName;
+            lblName.Text = "Merhaba " + currentUser.FirstName;
+            lblProfileName.Text = currentUser.FirstName;
         }
 
         private void btnBreakfast_Click(object sender, EventArgs e)
         {
+            currentMeal = userMeals?.FirstOrDefault(x => x.Meal.MealName == "Kahvaltı")?.Meal;
 
             if (currentMeal == null)
             {
-                currentMeal = new Breakfast() { MealDate = DateTime.Now.Date };
+                currentMeal = new Breakfast() { MealDate = dtpDate.Value.Date };
             }
 
-
-
-            SessionManager.CurrentMeal = currentMeal;                           // Bu formdaki meal bilgilerini SessionManager Meal a gönderdik. Bir sonraki forma geçince bunu rahatça kullanabileceğiz
-            new FoodForm().ShowDialog();
-
+            CheckMeal(currentMeal);
         }
+
+
 
         private void btn_Lunch_Click(object sender, EventArgs e)
         {
-            currentMeal = new Lunch() { MealDate = DateTime.Now.Date };
-            SessionManager.CurrentMeal = currentMeal;
-            new FoodForm().ShowDialog();
+            currentMeal = userMeals?.FirstOrDefault(x => x.Meal.MealName == "Öğle Yemeği")?.Meal;
+
+            if (currentMeal == null)
+            {
+                currentMeal = new Lunch() { MealDate = dtpDate.Value.Date };
+            }
+
+            CheckMeal(currentMeal);
         }
 
         private void btn_Dinner_Click(object sender, EventArgs e)
         {
-            currentMeal = new Dinner() { MealDate = DateTime.Now.Date };
-            SessionManager.CurrentMeal = currentMeal;
-            new FoodForm().ShowDialog();
+            currentMeal = userMeals?.FirstOrDefault(x => x.Meal.MealName == "Akşam Yemeği")?.Meal;
+
+            if (currentMeal == null)
+            {
+                currentMeal = new Dinner() { MealDate = dtpDate.Value.Date };
+            }
+
+            CheckMeal(currentMeal);
         }
 
         private void btn_Snack_Click(object sender, EventArgs e)
         {
-            currentMeal = new Snack() { MealDate = DateTime.Now.Date };
-            SessionManager.CurrentMeal = currentMeal;
-            new FoodForm().ShowDialog();
+            currentMeal = userMeals?.FirstOrDefault(x => x.Meal.MealName == "Ara Öğün")?.Meal;
+
+            if (currentMeal == null)
+            {
+                currentMeal = new Snack() { MealDate = dtpDate.Value.Date };
+            }
+
+            CheckMeal(currentMeal);
         }
 
-
-
-
-
-
-
-
-        private void pbProfile_Click(object sender, EventArgs e)  // ProfileForm Opened
+        private void CheckMeal(Meal meal)
         {
-            new ProfileForm().ShowDialog();
+            SessionManager.CurrentMeal = meal;
+            db.Entry(meal).State = EntityState.Detached;
+            db.SaveChanges();
+            Close();
+            new FoodForm().ShowDialog();
         }
     }
 }

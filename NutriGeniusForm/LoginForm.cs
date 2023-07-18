@@ -46,7 +46,5 @@ namespace NutriGeniusForm
             else
                 MessageBox.Show("Şifre veya kullanıcı hatalıdır!");
         }
-
-
     }
 }
